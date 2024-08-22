@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CountCartProducts extends Model
+class AttributesValues extends Model
 {
     use HasFactory;
-    protected $fillable=['count'];
+    protected $fillable=['value'];
+
 
 }

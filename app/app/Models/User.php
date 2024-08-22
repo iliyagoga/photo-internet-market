@@ -6,6 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Scope;
+use App\Models\Order;
+use App\Models\Product;
+use App\Models\News;
+use App\Models\Cart;
 
 class User extends Authenticatable
 {
@@ -49,4 +54,26 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function scope(){
+        return $this->hasOne(Scope::class);
+    }
+
+    public function order(){
+        return $this->hasMany(Order::class);
+    }
+
+    public function news(){
+        return $this->belongsToMany(News::class,'elect','news_id','user_id','id','id')->withPivot('comment')->withTimestamps();;
+    }
+
+    public function products(){
+        return $this->belongsToMany(Product::class,'elect','user_id','product_id','id','id');
+    }
+
+    public function cart(){
+        return $this->hasOne(Cart::class);
+    }
+
+
 }

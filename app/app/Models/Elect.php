@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Elect extends Model
 {
     use HasFactory;
+
 }
