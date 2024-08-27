@@ -40,7 +40,6 @@
                 и наличными</p>
             </div>
         </div>
-
         <div class="text">
             <h3>Вы ищете что-то конкретное?</h3>
             <p>Проект <span>Fotoprokat24</span> является агрегатором предложений всех фотопрокатов Москвы и служит для Вашего удобства. Выберете необходимую категорию, либо начните поиск по названию. Оформив заказ, Вы сможете забрать его из Пункта Выдачи, либо заказать доставку в любую точку Москвы.</p>
@@ -52,6 +51,72 @@
                     <input type="text" placeholder="Поиск">
                 </div>
             </div>
+        </div>
+        <div class="categories">
+            <div class="block block1">
+                <div class="b">
+                    <p>Фотокамеры Canon</p>
+                    <p>от 3000 рублей</p>
+                </div>
+            </div>
+            <div class="block block2">
+                <div class="b">
+                    <p>Видеокамеры</p>
+                    <p>по 200 рублей в сутки</p>
+                </div>
+            </div>
+            <div class="block block3">
+                <div class="b">
+                    <p>Товар недели</p>
+                    <p>всего за 4000 рублей</p>
+                </div>
+            </div>
+            <div class="block block4">
+                <div class="b">
+                    <p>Лучшие объективы</p>
+                    <p>по 700 рублей</p>
+                </div>
+            </div>
+            <div class="block block5">
+                <div class="b">
+                    <p>Отличные фотокамеры</p>
+                    <p>за 1500 рублей</p>
+                </div>
+            </div>
+        </div>
+        <div class="featuress">
+            <h3>Зарабатывайте вместе с нами</h3>
+            <p>Сдавайте свою технику через наш сервис, разместив её в каталоге, и получайте стабильную прибыль.</p>
+            <div class="fss">
+                <div class="fs">
+                    <span>Доступный способ <br> инвестировать</span>
+                    <div class="l">
+                        <img src="assets/svg/diamond.svg" alt="">
+                    </div>
+                </div>
+                <div class="fs">
+                    <span>Постоянный стабильный <br> доход</span>
+                    <div class="l">
+                        <img src="assets/svg/calendar-6.svg" alt="">
+                    </div>
+                </div>
+                <div class="fs">
+                    <span>Гарантии сохранности <br> техники</span>
+                    <div class="l">
+                        <img src="assets/svg/umbrella.svg" alt="">
+                    </div>
+                </div>
+                <div class="fs">
+                    <span>Прозрачные <br>
+                    выплаты</span>
+                    <div class="l">
+                        <img src="assets/svg/view.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="btn_catalog">
+                    <span>Предложить свою технику</span>
+                </div>
         </div>
 </div>
 @endsection('content')
