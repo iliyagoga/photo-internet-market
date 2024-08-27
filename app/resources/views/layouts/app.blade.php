@@ -8,7 +8,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+
     <link rel="stylesheet" href="resources/css/main.css">
+    <link rel="stylesheet" href="resources/css/meanpage.css">
+
 </head>
 <body>
     <div id="app">
@@ -53,7 +56,6 @@
             </div>
         </header>
         @yield('content')
-    </div>
     <footer>
         <div class="footer">
             <div class="main_info">
@@ -84,5 +86,6 @@
             </div>
         </div>
     </footer>
+    </div>
 </body>
 </html>
