@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+header .header {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  padding-left: 8.4375rem;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+header .header .left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+header .header .left .burger {
+  cursor: pointer;
+}
+header .header .right {
+  display: flex;
+  gap: 4.625rem;
+}
+header .header .right .phone_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+}
+header .header .right .phone_block a {
+  margin: 0;
+  line-height: 1.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+header .header .right .phone_block span {
+  color: #75758A;
+  font-size: 0.875rem;
+}
+header .header .right .icons_panel {
+  display: flex;
+  align-items: center;
+  gap: 1.375rem;
+  padding: 1rem 0;
+}
+header .header .right .icons_panel .favs, header .header .right .icons_panel .compare, header .header .right .icons_panel .shopping-cart {
+  position: relative;
+  height: 3.125rem;
+  width: 3.125rem;
+  display: flex;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+header .header .right .icons_panel .favs .count, header .header .right .icons_panel .compare .count, header .header .right .icons_panel .shopping-cart .count {
+  position: absolute;
+  height: 1.25rem;
+  width: 1.25rem;
+  background: #E3E3E3;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1.2rem;
+  top: 0;
+  right: 0;
+  font-size: 0.875rem;
+}
+header .header .right .icons_panel .favs img, header .header .right .icons_panel .compare img, header .header .right .icons_panel .shopping-cart img {
+  margin: auto;
+}
+header .header .right .icons_panel .favs:hover, header .header .right .icons_panel .compare:hover, header .header .right .icons_panel .shopping-cart:hover {
+  border-bottom: 2px solid #8EE901;
+}
+header .header .right .dop {
+  display: flex;
+}
+header .header .right .dop .search, header .header .right .dop .user {
+  padding: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #EFEFEF;
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+footer .footer {
+  padding: 2.1875rem 8.4375rem;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .main_info p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+footer .footer .main_info span {
+  color: #75758A;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+footer .footer .s {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .footer .s a {
+  color: #75758A;
+  font-size: 0.75rem;
+  text-decoration: none;
+  line-height: 1.25rem;
+}
+footer .footer .address {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer .address a {
+  margin: 0;
+  line-height: 1.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+footer .footer .address span {
+  color: #75758A;
+  font-size: 0.875rem;
+}
+footer .footer .payments {
+  display: flex;
+  gap: 1rem;
+}
+footer .footer .payments img {
+  height: 3rem;
+}
+footer .footer .payments .kassa {
+  width: 7rem;
+}
