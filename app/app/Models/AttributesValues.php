@@ -10,5 +10,9 @@ class AttributesValues extends Model
     use HasFactory;
     protected $fillable=['value'];
 
+    public function attributes(){
+        return $this->belongsTo(Attributes::class);
+    }
+
 
 }

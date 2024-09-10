@@ -1,0 +1,135 @@
+.body {
+  margin-bottom: 5rem;
+}
+.body .product {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+.body .product .left {
+  width: 40%;
+}
+.body .product .left .preview {
+  display: flex;
+  padding: 5rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #EFEFEF;
+}
+.body .product .left .info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+.body .product .left .info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.body .product .left .info .table {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.body .product .left .info .table .elem {
+  padding: 1rem 0;
+  border-top: 1px solid #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+}
+.body .product .left .info .table .elem .title {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.body .product .left .info .table .elem .value {
+  font-size: 0.875rem;
+}
+.body .product .left .info .table .elem:last-child {
+  border-bottom: 1px solid #EFEFEF;
+}
+.body .product .right {
+  width: 55%;
+}
+.body .product .right h2 {
+  font-size: 1.875rem;
+  margin: 0;
+}
+.body .product .right .check .b {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  padding: 0.625rem;
+  background: #4F9C2C;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+}
+.body .product .right .text {
+  margin-top: 4rem;
+}
+.body .product .right .text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.body .product .right .text p {
+  color: #75758A;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+}
+.body .product .right .prices {
+  margin-top: 4rem;
+}
+.body .product .right .prices h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.body .product .right .prices .pss {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.body .product .right .prices .pss .l {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.body .product .right .prices .pss .l .k {
+  padding: 1rem 0;
+  border-top: 1px solid #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+}
+.body .product .right .prices .pss .l .k .tl {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.body .product .right .prices .pss .l .k .price {
+  font-size: 0.875rem;
+  color: #60B021;
+}
+.body .product .right .prices .pss .l:last-child {
+  border-bottom: 1px solid #EFEFEF;
+}
+.body .product .right .tags {
+  margin-top: 4rem;
+}
+.body .product .right .tags h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.body .product .right .tags .ts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin-top: 1rem;
+}
+.body .product .right .tags .ts .tag {
+  color: #75758A;
+  font-size: 0.875rem;
+  padding: 0.4375rem 0.5625rem;
+  background: linear-gradient(180deg, rgba(247, 247, 247, 0.5) 0%, #F7F7F7 100%);
+  border: 1px solid #E3E3E3;
+}

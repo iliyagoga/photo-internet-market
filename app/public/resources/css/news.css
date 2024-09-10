@@ -1,0 +1,47 @@
+.body {
+  padding: 0 8.4375rem;
+}
+.body h1 {
+  text-transform: uppercase;
+}
+.body h1 span {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.body .news {
+  margin-top: 2.6875rem;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 3.125rem;
+}
+.body .news .block {
+  border: 1px solid #EFEFEF;
+  width: 100%;
+  cursor: pointer;
+}
+.body .news .block .preview {
+  width: 100%;
+}
+.body .news .block .preview img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.body .news .block .content {
+  padding: 1.875rem;
+  font-family: sans-serif;
+}
+.body .news .block .content .date span {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.body .news .block .content .title p {
+  font-size: 1.125rem;
+}
+.body .news .block .content .text p {
+  font-size: 0.875rem;
+  color: #75758A;
+}
