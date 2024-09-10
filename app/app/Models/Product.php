@@ -47,7 +47,7 @@ class Product extends Model
     }
     
     public function users(){
-        return $this->belongsToMany(Users::class,'elect','product_id','user_id','id','id');
+        return $this->belongsToMany(User::class,'elect','product_id','user_id','id','id');
     }
 
     public function carts(){
