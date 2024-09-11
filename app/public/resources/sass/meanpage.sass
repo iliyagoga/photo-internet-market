@@ -153,7 +153,7 @@
             grid-column: 1/3
         & .block5
             background-image: url('../../assets/png/photo (4).png')
-    .featuress
+    & .featuress
         display: flex
         flex-direction: column
         background: #F5F5F5
@@ -203,6 +203,62 @@
                 width: max-content
             &:hover
                 background: #4F9C2C
+    & .news
+        display: flex
+        flex-direction: column
+        background: white
+        padding: 5.9375rem 8.4375rem
+        justify-content: center
+        align-items: center
+        & h3
+            font-size: 1.125rem
+            margin: 0
+            line-height: 1.25rem
+            text-transform: uppercase
+        & .news_block
+            display: flex 
+            gap: 1.875rem
+            margin-top: 2rem
+            & .block
+                border: 1px solid #EFEFEF
+                width: 100%
+                cursor: pointer
+                & .preview
+                    width: 100%
+                    & img
+                        width: 100%
+                        object-fit: cover
+                & .content
+                    padding: 1.875rem
+                    font-family: sans-serif
+                    & .n_date span
+                        font-size: .875rem
+                        color: #75758A
+                    & .n_title p
+                        font-size: 1.125rem
+                    & .n_text p
+                        font-size: .875rem
+                        color: #75758A
+        & .btn
+            display: flex
+            justify-content: center
+            align-items: center
+            background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%)
+            border-radius: 100px
+            padding: 1.0625rem 3.375rem
+            cursor: pointer
+            width: max-content
+            margin-top: 2.5rem
+            & span
+                font-size: .875rem
+                line-height: 1rem
+                color: white
+                text-transform: uppercase
+                font-weight: 600
+                width: max-content
+            &:hover
+                background: #4F9C2C
+            
 
 
 

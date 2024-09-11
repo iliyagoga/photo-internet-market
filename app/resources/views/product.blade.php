@@ -25,6 +25,7 @@
         </div>
       </div>
      <div class="right">
+        <span class="company">{{!empty($company->name)?$company->name:''}}</span>
         <h2 class="title">
             {{$product->model}}
         </h2>
@@ -75,10 +76,8 @@
                 <div class="tag">
                     <span>{{$tag->value}}</span>
                 </div>
-            
             @endforeach
             </div>
-        
         </div>
      </div>
     </div>

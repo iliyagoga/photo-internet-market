@@ -116,7 +116,35 @@
             </div>
             <div class="btn_catalog">
                     <span>Предложить свою технику</span>
+            </div>
+        </div>
+        <div class="news">
+            <h3>Новости компании</h3>
+            <div class="news_block">
+            @foreach ($news as $n )
+                <div class="block">
+                    <div class="preview">
+                        <img src={{Storage::url($n->image)}} alt="">
+                    </div>
+                    <div class="content">
+                        <div class="n_date">
+                            <span>{{(new DateTime($n->created_at))->format('j F Y')}}</span>
+                        </div>
+                        <div class="n_title">
+                            <p>{{$n->title}}</p>
+                        </div>
+                        <div class="n_text">
+                            <p>{{$n->text}}</p>
+                        </div>
+                    </div>
+            
                 </div>
+            @endforeach
+           
+            </div>
+            <div class="btn">
+                <span>Все новости</span>
+            </div>
         </div>
 </div>
 @endsection('content')

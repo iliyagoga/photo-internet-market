@@ -247,3 +247,74 @@
 .meanpage .featuress .btn_catalog:hover {
   background: #4F9C2C;
 }
+.meanpage .news {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 5.9375rem 8.4375rem;
+  justify-content: center;
+  align-items: center;
+}
+.meanpage .news h3 {
+  font-size: 1.125rem;
+  margin: 0;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+.meanpage .news .news_block {
+  display: flex;
+  gap: 1.875rem;
+  margin-top: 2rem;
+}
+.meanpage .news .news_block .block {
+  border: 1px solid #EFEFEF;
+  width: 100%;
+  cursor: pointer;
+}
+.meanpage .news .news_block .block .preview {
+  width: 100%;
+}
+.meanpage .news .news_block .block .preview img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.meanpage .news .news_block .block .content {
+  padding: 1.875rem;
+  font-family: sans-serif;
+}
+.meanpage .news .news_block .block .content .n_date span {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.meanpage .news .news_block .block .content .n_title p {
+  font-size: 1.125rem;
+}
+.meanpage .news .news_block .block .content .n_text p {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.meanpage .news .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  padding: 1.0625rem 3.375rem;
+  cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 2.5rem;
+}
+.meanpage .news .btn span {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: -moz-max-content;
+  width: max-content;
+}
+.meanpage .news .btn:hover {
+  background: #4F9C2C;
+}

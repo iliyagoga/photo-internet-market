@@ -14,4 +14,6 @@ Route::get('/news',[App\Http\Controllers\NewsController::class,'index'])->name('
 
 Route::get('/product/{id}',[App\Http\Controllers\ProductController::class,'getProduct'])->name('getProduct');
 
+Route::get('/catalog/{category}',[App\Http\Controllers\ProductController::class,'getProductsByCategory'])->name('catalog');
+
 
