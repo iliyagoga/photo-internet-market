@@ -1,10 +1,10 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Attributes;
-use App\Models\Product;
 
 return new class extends Migration
 {
@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attributes_values', function (Blueprint $table) {
+        Schema::create('categories_product', function (Blueprint $table) {
             $table->id();
-            $table->string('value',16)->nullable(false);
-            $table->foreignIdFor(Attributes::class);
+            $table->foreignIdFor(Product::class);
+            $table->foreignIdFor(Category::class);
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('attributes_values');
+        Schema::dropIfExists('categories_product');
     }
 };

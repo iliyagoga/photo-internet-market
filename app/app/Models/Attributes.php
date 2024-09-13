@@ -10,10 +10,6 @@ class Attributes extends Model
     use HasFactory;
     protected $fillable=['value'];
 
-    public function products(){
-        return $this->belongsToMany(Product::class,'attributes','attributes_id','product_id','id','id')->withPivot('value');
-    }
-
     public function attributesValue(){
         return $this->hasMany(AttributesValues::class);
     }

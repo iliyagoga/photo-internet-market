@@ -19,7 +19,7 @@ class Product extends Model
     protected $fillable=['model','text','price_wkday','price_wend','price_week','price_month','stock','mean_image'];
 
     public function category(){
-        return $this->hasMany(Category::class);
+        return $this->belongsToMany(Category::class,'categories_product','category_id','product_id','id','id');
     }
 
     public function complectation(){
@@ -41,10 +41,6 @@ class Product extends Model
     public function orders(){
         return $this->belongsToMany(Order::class,'elements_orders','order_id','product_id','id','id')->withPivot('count');
     }
-
-    public function attributes(){
-        return $this->belongsToMany(Attributes::class,'attributes_values','product_id','attributes_id','id','id')->withPivot('value');
-    }
     
     public function users(){
         return $this->belongsToMany(User::class,'elect','product_id','user_id','id','id');
@@ -52,6 +48,10 @@ class Product extends Model
 
     public function carts(){
         return $this->belongsToMany(Cart::class,'countCartProducts','product_id','cart_id','id','id')->withTimestamps();
+    }
+
+    public function attributesValue(){
+        return $this->belongsToMany(AttributesValues::class,'attributes_products','product_id','attributes_values_id','id','id');
     }
 
 

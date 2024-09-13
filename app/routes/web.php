@@ -16,4 +16,3 @@ Route::get('/product/{id}',[App\Http\Controllers\ProductController::class,'getPr
 
 Route::get('/catalog/{category}',[App\Http\Controllers\ProductController::class,'getProductsByCategory'])->name('catalog');
 
-
