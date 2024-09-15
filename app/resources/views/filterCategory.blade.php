@@ -1,16 +1,19 @@
-<pre>
-    {{print_r($product)}}
-</pre>
+
 <div class="filter">
 
     <form action="{{URL::current()}}">
-        @foreach ($product->attributes()->get() as $attribute)
+        @foreach ($attributes as $k=>$v)
             <div class="attribute">
-                <h4>{{$attribute->value}}</h4>
-                @foreach ($attribute->attributesValue()->distinct('value')->get() as $attributeValue)
+                <h4>{{$v['value']}}</h4>
+                @foreach ($v['values'] as $attributeValue)
                     <div class="value">
-                        <input type="checkbox" name="at_{{$attribute->id}}" id="av_{{$attributeValue->id}}" value="{{$attributeValue->value}}">
-                        <label for="av_{{$attributeValue->id}}">{{$attributeValue->value}}</label>
+                        @if (  session()->exists($attributeValue[1]))
+                        <input checked="checked" type="checkbox" name="at_{{$k}}" id="av_{{$attributeValue[1]}}" value="{{$attributeValue[1]}}"/>
+                        @else
+                        <input type="checkbox" name="at_{{$k}}" id="av_{{$attributeValue[1]}}" value="{{$attributeValue[1]}}"/>
+                        @endif
+                        <label for="av_{{$attributeValue[0]}}">{{$attributeValue[0]}}</label>
+                     
                     </div>
                 @endforeach
             </div>

@@ -19,7 +19,7 @@ class Product extends Model
     protected $fillable=['model','text','price_wkday','price_wend','price_week','price_month','stock','mean_image'];
 
     public function category(){
-        return $this->belongsToMany(Category::class,'categories_product','category_id','product_id','id','id');
+        return $this->belongsToMany(Category::class,'categories_product','product_id','category_id','id','id');
     }
 
     public function complectation(){
