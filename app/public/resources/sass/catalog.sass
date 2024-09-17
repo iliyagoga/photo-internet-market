@@ -1,8 +1,62 @@
 .body
     & .catalog
         font-family: sans-serif
+        & .catalog_header
+            margin-top: 1.625rem
+            & .sort
+                display: flex
+                gap: 1rem
+                & .price
+                    display: flex
+                    gap: 1rem
+                    align-items: center
+                    border: 1px solid #E3E3E3
+                    background:#F7F7F7
+                    padding: .5rem .4rem
+                    & span
+                        color: #75758A
+                    & a
+                        padding: .5rem .4rem
+                        display: flex
+                        box-shadow: 0px 2px 6px 0px #00000026
+                        border: 1px solid white
+                        cursor: pointer
+                        box-sizing: border-box
+                        & img   
+                            margin: auto
+            & .pagination
+                display: flex
+                gap: 1rem
+                justify-content: end
+                & .p
+                    padding: 1rem .8125rem
+                    display: flex
+                    box-shadow: 0px 2px 6px 0px #00000026
+                    border: 1px solid white
+                    cursor: pointer
+                    box-sizing: border-box
+                    & img   
+                        margin: auto
+                & .none_active
+                    border: 1px solid #E3E3E3
+                    background: #F7F7F7
+                & form
+                    & button
+                        padding: 1rem .8125rem
+                        display: flex
+                        box-shadow: 0px 2px 6px 0px #00000026
+                        border: 1px solid white
+                        cursor: pointer
+                        box-sizing: border-box
+                        background: white
+                        & img   
+                            margin: auto
+
+
         & .c_body
             display: flex
+            margin-top: 1.625rem
+            justify-content: space-between
             & h2
                 font-size: 1.875rem
                 text-transform: uppercase
@@ -15,8 +69,9 @@
                     background-clip: text
             & .filter
                 display: flex
-                width: 30%
+                width: max-content
                 justify-content: end
+                border-top: 1px solid #E3E3E3
                 & form
                     display: flex
                     flex-direction: column
@@ -27,6 +82,14 @@
                         gap: .5rem
                         &>*
                             cursor: pointer
+                    & button
+                        padding: .75rem 1.25rem
+                        background:  #F5F5F5
+                        border: 1px solid #E3E3E3
+                        color: #75758A
+                        font-size: 1rem
+                        cursor: pointer
+
 
             & .catalog_list
                 display: flex
@@ -69,6 +132,5 @@
                         font-weight: 700
                         text-align: center
                         margin-top: 1rem
-
        
             

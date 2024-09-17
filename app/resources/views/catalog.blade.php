@@ -2,12 +2,12 @@
 @section('content')
 <div class="body">
     <div class="catalog">
-        <h2>{{$cValue->value}}</h2>
+        <h2>Каталог</h2>
         <div class="count">
             Найдено <span>{{$count}} товаров</span>
         </div>
         <div class="catalog_header">
-        @include('pagination')
+        @include('paginationCatalog')
         </div>
         <div class="c_body">
             <div class="catalog_list">

@@ -1,7 +1,7 @@
 
 <div class="filter">
-
-    <form action="{{URL::current()}}">
+    
+    <form action="{{substr(URL::current(), 0,strlen(URL::current())-1).(request()->session()->exists('page'))?request()->session()->get('page'):'1'}}">
         @foreach ($attributes as $k=>$v)
             <div class="attribute">
                 <h4>{{$v['value']}}</h4>
@@ -18,7 +18,7 @@
                 @endforeach
             </div>
         @endforeach
-        <button type="submit">55</button>
+        <button type="submit">Искать</button>
     </form>
 </div>
 
