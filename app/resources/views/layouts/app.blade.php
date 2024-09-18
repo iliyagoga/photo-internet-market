@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{URL::asset('resources/css/news.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/product.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/catalog.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/css/register.css')}}">
 </head>
 <body>
     <div id="app">

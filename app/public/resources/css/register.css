@@ -1,0 +1,64 @@
+.register {
+  display: flex;
+  font-family: sans-serif;
+  flex-direction: column;
+  padding: 0 8.4375rem;
+}
+.register h2 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+.register .r_body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.register .r_body .fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  width: 100%;
+  align-items: center;
+}
+.register .r_body .fields .line {
+  display: flex;
+  gap: 1.875rem;
+  width: 100%;
+}
+.register .r_body .fields .line .block {
+  display: flex;
+  flex-direction: column;
+  padding: 1.125rem;
+  border: 1px solid #E3E3E3;
+  width: 100%;
+}
+.register .r_body .fields .line .block input {
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+}
+.register .r_body .fields .line .block label {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.register .r_body .fields p {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #75758A;
+}
+.register .r_body .fields button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  padding: 1.0625rem 3.375rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}

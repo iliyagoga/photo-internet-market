@@ -30,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/catalog/1';
+    protected $redirectTo = '/catalog/1/1';
 
     /**
      * Create a new controller instance.
@@ -55,6 +55,7 @@ class RegisterController extends Controller
         'patronymic.required'=>'Это поле должно быть заполнено',
         'email.required'=>'Это поле должно быть заполнено',
         'phone.required'=>'Это поле должно быть заполнено',
+        'date.required'=>'Это поле должно быть заполнено',
         'password.required'=>'Это поле должно быть заполнено',
         'sername.string'=>'Неверный формат ввода',
         'name.string'=>'Неверный формат ввода',
@@ -64,6 +65,7 @@ class RegisterController extends Controller
         'email.email'=>'Неверный формат ввода почты',
         'password.confirmed'=>'Пароли не совпадают',
         'password.min'=>'Пароль должен быть не менее 8 символов',
+        'date.date'=>'Поле должно быть датой',
         'email.unique'=>'Такая почта уже зарегистрирована',
         'phone.unique'=>'Такой номер уже зарегистрирован'
     ];
@@ -74,6 +76,7 @@ class RegisterController extends Controller
             "patronymic"=>['required','string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'phone'=>['required', 'numeric','unique:users'],
+            'date'=>['required', 'date'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ],$messages);
     }
@@ -88,7 +91,14 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
+            'r_name' => $data['name'],
             'email' => $data['email'],
+            'birthday' => $data['date'],
+            'sername'=>$data['sername'],
+            's_sername'=>$data['sername']?$data['sername']:null,
+            "patronymic"=>$data["patronymic"],
+            "phone"=>$data['phone'],
+            "s_phone"=>$data['phone'],
             'password' => Hash::make($data['password']),
 
         ]);
