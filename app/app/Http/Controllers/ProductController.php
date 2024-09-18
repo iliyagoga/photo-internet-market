@@ -150,12 +150,9 @@ class ProductController extends Controller
         }
     }
     public function clearSession(Request $request){
-        echo '<pre>';
-        
         $url=(explode('/',session()->get('_previous')['url']));
-        echo ('</pre>');
         foreach(session()->all() as $k=>$v){
-            if($k!='_token'){
+            if($v=='y'){
                 session()->remove($k);
             }
 
@@ -165,12 +162,9 @@ class ProductController extends Controller
      }
 
      public function clearSession2(Request $request){
-        echo '<pre>';
-        
         $url=(explode('/',session()->get('_previous')['url']));
-        echo ('</pre>');
         foreach(session()->all() as $k=>$v){
-            if($k!='_token'){
+            if($v=='y'){
                 session()->remove($k);
             }
 

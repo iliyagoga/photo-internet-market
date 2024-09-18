@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -28,7 +30,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/catalog/1';
 
     /**
      * Create a new controller instance.
@@ -47,12 +49,33 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
-    {
+    {   $messages=[
+        'sername.required'=>'Это поле должно быть заполнено',
+        'name.required'=>'Это поле должно быть заполнено',
+        'patronymic.required'=>'Это поле должно быть заполнено',
+        'email.required'=>'Это поле должно быть заполнено',
+        'phone.required'=>'Это поле должно быть заполнено',
+        'password.required'=>'Это поле должно быть заполнено',
+        'sername.string'=>'Неверный формат ввода',
+        'name.string'=>'Неверный формат ввода',
+        'patronymic.string'=>'Неверный формат ввода',
+        'password.string'=>'Неправильный формат ввода',
+        'phone.numeric'=>'Неверно введен номер телефона',
+        'email.email'=>'Неверный формат ввода почты',
+        'password.confirmed'=>'Пароли не совпадают',
+        'password.min'=>'Пароль должен быть не менее 8 символов',
+        'email.unique'=>'Такая почта уже зарегистрирована',
+        'phone.unique'=>'Такой номер уже зарегистрирован'
+    ];
         return Validator::make($data, [
+            "sername"=>['required','string', 'max:255'],
+            "s_sername"=>['present'],
             'name' => ['required', 'string', 'max:255'],
+            "patronymic"=>['required','string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'phone'=>['required', 'numeric','unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        ],$messages);
     }
 
     /**
@@ -67,6 +90,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+
         ]);
     }
 }
