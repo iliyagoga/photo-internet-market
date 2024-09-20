@@ -91,6 +91,18 @@ header .header .right .dop .search, header .header .right .dop .user {
   border-left: 1px solid #EFEFEF;
   cursor: pointer;
 }
+header .header .right .logn {
+  padding: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #EFEFEF;
+}
+header .header .right .logn a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
 
 footer {
   width: 100%;

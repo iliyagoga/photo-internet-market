@@ -1,0 +1,93 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8.4375rem;
+}
+.profile_menu {
+  display: flex;
+  justify-content: end;
+}
+.profile_menu button {
+  background: white;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+.profile_menu button img {
+  height: 1.875rem;
+  width: 1.875rem;
+}
+.profile h2 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+.profile h2 span {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.profile .fields {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.profile .fields .passport, .profile .fields .second_info {
+  margin-top: 2.8125rem;
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+.profile .fields .passport .h3, .profile .fields .second_info .h3 {
+  font-size: 1rem;
+}
+.profile .fields .passport span, .profile .fields .second_info span {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.profile .fields .line {
+  display: flex;
+  gap: 2.5rem;
+}
+.profile .fields .line .block {
+  display: flex;
+  flex-direction: column;
+  padding: 1.125rem;
+  border: 1px solid #E3E3E3;
+  width: 100%;
+  background: #F5F5F5;
+}
+.profile .fields .line .block input {
+  border: 0;
+  outline: 0;
+  font-size: 1.5rem;
+  background: #F5F5F5;
+}
+.profile .fields .line .block label {
+  font-size: 0.875rem;
+  color: #75758A;
+}
+.profile .fields .base_info {
+  display: flex;
+  gap: 2.5rem;
+  flex-direction: column;
+}
+.profile .fields form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  padding: 1.0625rem 3.375rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin: 2.5rem auto;
+}

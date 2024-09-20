@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{URL::asset('resources/css/catalog.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/register.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/login.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/css/profile.css')}}">
 </head>
 <body>
     <div id="app">
@@ -52,9 +53,17 @@
                         <div class="search">
                             <img src="{{URL::asset('assets/svg/search.svg')}}" alt="">
                         </div>
+                        @if (Auth::check())
                         <div class="user">
-                            <img src="{{URL::asset('assets/svg/user.svg')}}" alt="">
+                            <a href="{{route('profile')}}"><img src="{{URL::asset('assets/svg/user.svg')}}" alt=""></a>
                         </div>
+                        @else
+                        <div class="logn">
+                            <a href="{{route('login')}}">Войти</a>
+                        </div>
+                
+                        @endif
+                       
                     </div>
                 </div>
             </div>

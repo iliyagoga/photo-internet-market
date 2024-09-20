@@ -27,3 +27,9 @@ Route::get('/c/{page}/{price?}',[App\Http\Controllers\ProductController::class,'
 Route::post('/clearSession',[App\Http\Controllers\ProductController::class,'clearSession'])->name('sess');
 
 Route::post('/clearSession2',[App\Http\Controllers\ProductController::class,'clearSession2'])->name('sess');
+
+Route::get( '/profile',[App\Http\Controllers\ProfileController::class,'showProfile'])->name('profile')->middleware('auth');
+
+Route::post( '/updateProfile',[App\Http\Controllers\ProfileController::class,'updateProfile'])->name('updateProfile')->middleware('auth');
+
+Route::post( '/logout',[App\Http\Controllers\ProfileController::class,'logout'])->name('logout')->middleware('auth');
