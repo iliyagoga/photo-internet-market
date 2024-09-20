@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 return new class extends Migration
 {
@@ -28,18 +29,20 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::create('users_private_info', function (Blueprint $table) {
+        Schema::create('users_private_infos', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('passport')->nullable(false)->unique();
             $table->date('take_date')->nullable(false);
             $table->string('residence_address')->nullable(false);
             $table->string('live_address')->nullable(false);
             $table->string('taker')->nullable(false);
-            $table->string('company_name',64)->nullable(false);
-            $table->string('post',32)->nullable(false);
-            $table->bigInteger('w_phone')->nullable(false)->unique();
+            $table->string('company_name',64);
+            $table->string('post',32);
+            $table->bigInteger('w_phone');
             $table->string('from');
             $table->string('witness');
+            $table->foreignIdFor(User::class);
+            $table->timestamps();
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {

@@ -1,0 +1,89 @@
+.background {
+  width: 100vw;
+  height: 100vh;
+  background: #75758A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.background .login {
+  padding: 1.875rem;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.background .login .card-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.background .login .card-body .field {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #E3E3E3;
+  width: 100%;
+  background: #F5F5F5;
+  box-sizing: border-box;
+}
+.background .login .card-body .field input {
+  background: #F5F5F5;
+  border: 0;
+  outline: 0;
+  padding: 0.875rem;
+}
+.background .login .card-body .field span {
+  font-size: 0.625rem;
+}
+.background .login .card-body .forgot {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+.background .login .card-body .check input {
+  color: #F5F5F5;
+}
+.background .login .card-body .check a {
+  font-size: 0.875rem;
+}
+.background .login .card-body button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  padding: 1.0625rem 5.1rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 600;
+  border: 0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin: auto;
+}
+.background .login .card-body .register_b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  padding: 1.0625rem 3.375rem;
+  font-weight: 600;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin: auto;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
