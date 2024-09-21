@@ -20,4 +20,8 @@ class Cart extends Model
         return $this->belongsToMany(Product::class,'countCartProducts','cart_id','product_id','id','id')->withTimestamps();
     }
 
+    public function countCartProduct(){
+        return $this->hasOne(CountCartProducts::class);
+    }
+
 }

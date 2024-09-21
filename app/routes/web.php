@@ -33,3 +33,7 @@ Route::get( '/profile',[App\Http\Controllers\ProfileController::class,'showProfi
 Route::post( '/updateProfile',[App\Http\Controllers\ProfileController::class,'updateProfile'])->name('updateProfile')->middleware('auth');
 
 Route::post( '/logout',[App\Http\Controllers\ProfileController::class,'logout'])->name('logout')->middleware('auth');
+
+Route::post('/addToCart',[App\Http\Controllers\BasketController::class,'addToCart'])->name('addToCart')->middleware('auth');
+
+Route::get('/cart',[App\Http\Controllers\BasketController::class,'showCart'])->name('showCart')->middleware('auth');

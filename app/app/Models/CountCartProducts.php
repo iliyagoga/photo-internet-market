@@ -10,4 +10,8 @@ class CountCartProducts extends Model
     use HasFactory;
     protected $fillable=['count'];
 
+    public function cart(){
+        return $this->belongsToMany(Cart::class);
+    }
+
 }

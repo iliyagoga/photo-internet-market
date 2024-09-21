@@ -39,6 +39,12 @@
                 <span>Нет в наличии</span>
             </div>
             @endif
+            <form class="add" method="post" action="{{route('addToCart')}}">
+                @csrf
+                <input type="hidden" name="product_id" value="{{$product->id}}">
+                <button type="submit">Добавить в корзину</button>
+
+            </form>
         </span>
         <div class="text">
             <h3>Описание товара</h3>

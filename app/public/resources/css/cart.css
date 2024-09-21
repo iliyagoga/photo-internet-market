@@ -1,0 +1,52 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8.4375rem;
+}
+.cart h2 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+.cart .times form .time {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.cart .times form .time .block {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.cart .times form .time .block label {
+  color: #75758A;
+  font-size: 0.875rem;
+  padding: 1.25rem 0 0 1.0625rem;
+}
+.cart .times form .time .block input {
+  border: 0;
+  outline: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0 1.0625rem 1.25rem 1.0625rem;
+}
+.cart .times form .cart_products {
+  margin-top: 1.875rem;
+}
+.cart .times form .cart_products table {
+  width: 100%;
+}
+.cart .times form .cart_products table thead {
+  color: #75758A;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #E3E3E3;
+  border-top: 1px solid #E3E3E3;
+}
+.cart .times form .cart_products table tbody tr {
+  border: 1px solid #000000;
+}
+.cart .times form .cart_products table tbody .preview img {
+  width: 3.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

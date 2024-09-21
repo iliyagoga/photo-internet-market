@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{URL::asset('resources/css/register.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/login.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/profile.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/css/cart.css')}}">
 </head>
 <body>
     <div id="app">

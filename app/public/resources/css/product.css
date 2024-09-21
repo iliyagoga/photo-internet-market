@@ -64,14 +64,44 @@
   -webkit-background-clip: text;
           background-clip: text;
 }
-.body .product .right .check .b {
+.body .product .right .check {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
   margin-top: 1rem;
+}
+.body .product .right .check .b {
   font-size: 0.875rem;
   padding: 0.625rem;
   background: #4F9C2C;
   color: white;
   width: -moz-max-content;
   width: max-content;
+}
+.body .product .right .check .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+}
+.body .product .right .check .add button {
+  outline: none;
+  border: none;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  text-transform: uppercase;
+  line-height: 3rem;
 }
 .body .product .right .text {
   margin-top: 4rem;

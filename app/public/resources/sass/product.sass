@@ -52,13 +52,37 @@
                 color: transparent
                 background-clip: text
             & .check
+                display: flex
+                gap: 1rem
+                align-items: center
+                margin-top: 1rem
                 & .b
-                    margin-top: 1rem
                     font-size: .875rem
                     padding: .625rem
                     background: #4F9C2C
                     color: white
                     width: max-content
+                & .add
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    height: max-content
+                    width: max-content
+                    box-sizing: border-box
+                    & button
+                        outline: none
+                        border: none
+                        background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%)
+                        border-radius: 100px
+                        font-size: .875rem
+                        cursor: pointer
+                        outline: none
+                        color: white
+                        width: max-content
+                        border: 0
+                        text-transform: uppercase
+                        line-height: 3rem
+
             & .text
                 margin-top: 4rem
                 & h3
