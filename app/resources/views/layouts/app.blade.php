@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{URL::asset('resources/css/login.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/profile.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/cart.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/css/preorder.css')}}">
 </head>
 <body>
     <div id="app">
@@ -45,10 +46,11 @@
                             <span class="count">0</span>
                             <img src="{{URL::asset('assets/svg/compare.svg')}}" alt="">
                         </div>
-                        <div class="shopping-cart">
+                        <a class="shopping-cart" href="{{route('showCart')}}">
                             <span class="count">0</span>
                             <img src="{{URL::asset('assets/svg/shopping-cart.svg')}}" alt="">
-                        </div>
+
+                        </a>
                     </div>
                     <div class="dop">
                         <div class="search">
@@ -102,4 +104,6 @@
     </footer>
     </div>
 </body>
+<script src="{{URL::asset('resources/js/summ.js')}}"></script>
+<script src="{{URL::asset('resources/js/counter.js')}}"></script>
 </html>

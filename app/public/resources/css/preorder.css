@@ -1,0 +1,142 @@
+.preorder {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8.4375rem;
+}
+.preorder h2 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  text-transform: uppercase;
+}
+.preorder h2 span {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.preorder h3 {
+  font-size: 0.875rem;
+  margin: 0;
+}
+.preorder .first_total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.preorder .first_total .block {
+  width: 30%;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.preorder .first_total .block .left {
+  display: flex;
+  flex-direction: column;
+}
+.preorder .first_total .block .left span {
+  color: #75758A;
+  font-size: 0.875rem;
+}
+.preorder .first_total .block .left p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+.preorder .first_total .block .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.preorder .products_table {
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
+}
+.preorder .products_table table {
+  width: 100%;
+}
+.preorder .products_table table tbody {
+  width: 100%;
+}
+.preorder .products_table table tbody tr {
+  width: 100%;
+}
+.preorder .products_table table tbody tr td {
+  border-bottom: 1px solid #E3E3E3;
+  height: 5rem;
+}
+.preorder .products_table table tbody tr .preview img {
+  width: 3.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.preorder .products_table table tbody tr .name h3 {
+  margin: 0;
+}
+.preorder .products_table table tbody tr .name span {
+  color: #75758A;
+  font-size: 0.875rem;
+}
+.preorder .products_table table tbody tr .tot {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.preorder form {
+  display: flex;
+  flex-direction: column;
+}
+.preorder form .dops {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+.preorder form .dops .point {
+  display: flex;
+  align-items: center;
+}
+.preorder form .dops .point .k label {
+  font-size: 0.875rem;
+}
+.preorder form .dops .point span {
+  margin-left: 5rem;
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.preorder form .comment {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+.preorder form .comment textarea {
+  width: 100%;
+  padding: 1.25rem;
+  height: 10rem;
+}
+.preorder form button {
+  outline: none;
+  border: none;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  text-transform: uppercase;
+  line-height: 3rem;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 2rem auto;
+}

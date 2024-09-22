@@ -37,3 +37,11 @@ Route::post( '/logout',[App\Http\Controllers\ProfileController::class,'logout'])
 Route::post('/addToCart',[App\Http\Controllers\BasketController::class,'addToCart'])->name('addToCart')->middleware('auth');
 
 Route::get('/cart',[App\Http\Controllers\BasketController::class,'showCart'])->name('showCart')->middleware('auth');
+
+Route::get('/redactDates',[App\Http\Controllers\BasketController::class,'redactDates'])->name('redactDates')->middleware('auth');
+
+Route::get('/deleteFromCart/{product_id}',[App\Http\Controllers\BasketController::class,'deleteFromCart'])->name('deleteFromCart')->middleware('auth');
+
+Route::post('/showPreOrder',[App\Http\Controllers\BasketController::class,'showPreOrder'])->name('showPreOrder')->middleware('auth');
+
+Route::post('/createOrder',[App\Http\Controllers\OrderController::class,'createOrder'])->name('createOrder')->middleware('auth');

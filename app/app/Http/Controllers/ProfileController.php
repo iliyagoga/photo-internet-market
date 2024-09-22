@@ -84,5 +84,6 @@ class ProfileController extends Controller
         Auth::logout();
         return redirect(url('c/1/1'));
     }
+    
 
 }
