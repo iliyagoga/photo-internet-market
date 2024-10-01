@@ -12,7 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('order', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->date('start')->nullable(false);
             $table->date('stop')->nullable(false);
@@ -20,6 +20,7 @@ return new class extends Migration
             $table->boolean('delivery')->nullable(false);
             $table->boolean('onlinepay')->nullable(false);
             $table->text('comment');
+            $table->integer('summ')->nullable(false);
             $table->foreignIdFor(User::class);
             $table->timestamps();
         });

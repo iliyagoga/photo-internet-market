@@ -7,6 +7,23 @@
   display: flex;
   justify-content: end;
 }
+.profile_menu .left-menu {
+  display: flex;
+}
+.profile_menu .left-menu div {
+  padding: 0.875rem 1.4375rem;
+  cursor: pointer;
+  background: #F7F7F7;
+  border: 1px solid #E3E3E3;
+  color: #75758A;
+}
+.profile_menu .left-menu .active {
+  color: black;
+  background: white;
+  border: 1px solid white;
+  border-top: 1px solid #4F9C2C;
+  font-weight: 700;
+}
 .profile_menu button {
   background: white;
   outline: 0;
@@ -31,6 +48,9 @@
   margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
+}
+.profile .fields .hidden {
+  display: none;
 }
 .profile .fields .passport, .profile .fields .second_info {
   margin-top: 2.8125rem;
@@ -90,4 +110,126 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   margin: 2.5rem auto;
+}
+.profile .fields .history {
+  display: flex;
+  flex-direction: column;
+}
+.profile .fields .history .table {
+  width: 100%;
+  display: block;
+}
+.profile .fields .history .table .theads {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid #EFEFEF;
+  border-bottom: 1px solid #EFEFEF;
+}
+.profile .fields .history .table .theads .thead {
+  display: flex;
+  align-items: center;
+  width: 15%;
+  height: 4rem;
+}
+.profile .fields .history .table .theads .thead span {
+  width: 100%;
+  color: #75758A;
+  font-size: 0.875rem;
+}
+.profile .fields .history .table .tbody {
+  font-size: 0.875rem;
+  width: 100%;
+}
+.profile .fields .history .table .tbody .chars-pr {
+  display: flex;
+  flex-direction: column;
+}
+.profile .fields .history .table .tbody .chars-pr .h {
+  display: flex;
+  gap: 2rem;
+  height: 4rem;
+  align-items: center;
+}
+.profile .fields .history .table .tbody .chars-pr .chars-pr-elem {
+  cursor: pointer;
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.profile .fields .history .table .tbody .chars-pr .chars-pr-elem .id_order {
+  font-weight: 600;
+}
+.profile .fields .history .table .tbody .chars-pr .chars-pr-elem .summ {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-weight: 600;
+}
+.profile .fields .history .table .tbody .chars-pr .chars-pr-elem .reload {
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  border-radius: 100px;
+}
+.profile .fields .history .table .tbody .chars-pr .chars-pr-elem .arrow {
+  margin-left: 2rem;
+  width: 0.7rem;
+}
+.profile .fields .history .table .tbody .chars-pr .chars-pr-elem .rotate {
+  transform: rotate(-90deg);
+}
+.profile .fields .history .table .tbody .t-products {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.profile .fields .history .table .tbody .t-products .t-product {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.profile .fields .history .table .tbody .t-products .t-product > div {
+  width: 15%;
+}
+.profile .fields .history .table .tbody .t-products .t-product .name, .profile .fields .history .table .tbody .t-products .t-product .price, .profile .fields .history .table .tbody .t-products .t-product .count {
+  padding: 0.9375rem 1.1875rem;
+}
+.profile .fields .history .table .tbody .t-products .t-product .preview {
+  padding: 0.9375rem 1.1875rem;
+}
+.profile .fields .history .table .tbody .t-products .t-product .preview img {
+  width: 4rem;
+}
+.profile .fields .history .table .tbody .t-products .t-product .count {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.profile .fields .history .table .tbody .t-products .t-product .price {
+  font-weight: 600;
+}
+.profile .fields .history .table .tbody .hidden {
+  display: none;
+}
+.profile .fields .history .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  padding: 1.0625rem 3.375rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin: 2.5rem auto;
+  text-decoration: none;
 }

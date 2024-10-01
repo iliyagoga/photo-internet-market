@@ -66,6 +66,7 @@
         </div>
         <form action="{{route('createOrder')}}" method="post">
             @csrf
+            <input type="hidden" name="summ" value="{{$summ}}">
             @foreach ($products as $product )
                 <input type="hidden"  name="p_{{$product->id}}" value="{{$product->pivot->count}}">
             @endforeach

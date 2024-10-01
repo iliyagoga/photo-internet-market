@@ -8,13 +8,13 @@ use App\Models\Product;
 use App\Models\User;
 class Order extends Model
 {
-    protected $fillable = ['start','stop','convoy','delivery','onlinepay','comment'];
+    protected $fillable = ['start','stop','convoy','delivery','onlinepay','comment','summ'];
 
     public function user(){
         return $this->belongsTo(User::class);
     }
 
     public function products(){
-        return $this->belongsToMany(Product::class,'elements_orders','product_id','order_id','id','id')->withPivot('count');
+        return $this->belongsToMany(Product::class,'element_orders','order_id','product_id','id','id')->withPivot('count');
     }
 }

@@ -106,4 +106,6 @@
 </body>
 <script src="{{URL::asset('resources/js/summ.js')}}"></script>
 <script src="{{URL::asset('resources/js/counter.js')}}"></script>
+<script src="{{URL::asset('resources/js/thrw.js')}}"></script>
+<script src="{{URL::asset('resources/js/checkMenuProfile.js')}}"></script>
 </html>

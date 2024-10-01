@@ -15,7 +15,8 @@ class OrderController extends Controller
 
     public function createOrder(Request $request){
         $this->validate(request(), [
-            'dates'=>['required']
+            'dates'=>['required'],
+            'summ'=>['required','numeric']
         ]);
         $productsIds=[];
         $counts=[];
@@ -39,7 +40,8 @@ class OrderController extends Controller
             'convoy'=>empty($request->convoy)?false:true,
             'delivery'=>empty($request->delivery)?false:true,
             'onlinepay'=>empty($request->onlinepay)?false:true,
-            'comment'=>empty($request->comment)?'':$request->comment
+            'comment'=>empty($request->comment)?'':$request->comment,
+            'summ'=>empty($request->summ)?0:$request->summ
         ]);
         $order->save();
         for($i= 0;$i<count($productsIds);$i++){

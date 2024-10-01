@@ -1,18 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Auth;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
+class ProfileController extends Controller{
 
-class ProfileController extends Controller
-{ 
     use ValidatesRequests;
     public function index(){}
 
     public function showProfile(Request $request){
-        return view("profile");
+        return view("profile",[
+            "orders"=>Auth::user()->order()->get()
+        ]);
     }
 
     public function updateProfile(Request $request){
@@ -28,7 +30,7 @@ class ProfileController extends Controller
             'take_date'=>['required','date'],
             'residence_address'=>['required','string'],
             'live_address'=>['required','string'],
-            'taker'=>['required','string'],
+            'taker'=>['required','string']
         ],[
             'sername.required'=>'Это поле должно быть заполнено',
             'name.required'=>'Это поле должно быть заполнено',
