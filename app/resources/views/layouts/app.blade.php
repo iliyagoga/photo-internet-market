@@ -9,6 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <link rel="stylesheet" href="{{URL::asset('resources/css/breadcrumbs.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/main.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/meanpage.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/news.css')}}">
@@ -19,17 +20,76 @@
     <link rel="stylesheet" href="{{URL::asset('resources/css/profile.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/cart.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/preorder.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/css/categories.css')}}">
 </head>
 <body>
     <div id="app">
         <header>
             <div class="header">
                 <div class="left">
-                    <div class="burger">
-                        <img src="{{URL::asset('assets/png/menu.png')}}" alt="">
-                    </div>
+                    <img class="burger" src="{{URL::asset('assets/png/menu.png')}}" alt="">
                     <div class="logo">
                         <img src="{{URL::asset('assets/png/logo.png')}}" alt="">
+                    </div>
+                    <div class="list-menu hidden">
+                        <div class="l-l">
+                            @php
+                            use App\Models\Category;
+                            $c=0;
+                            @endphp
+                            <ul>
+                                <li class="cat">
+                                    <a href="{{route('catalog',[1,1])}}">Каталог</a>
+                                </li>
+                            @foreach (Category::get() as $category)
+                                <li>
+                                    @if ($c<5)
+                                    <a href="{{route('category',[$category->name,1,1])}}">{{$category->value}}</a>
+                                    @endif
+                                    @php
+                                    $c++;
+                                    @endphp
+                              
+                                </li>
+                            @endforeach
+                            <li>
+                            <a class="more" href="{{route('categories')}}">Смотреть еще категории</a>
+                            </li>
+                            </ul>
+                          
+                        </div>
+                        <div class="l-r">
+                            <ul>
+                                <li>
+                                    <a href="#">Как это работает</a>
+                                </li>
+                                <li>
+                                    <a href="#">Правила аренды</a>
+                                </li>
+                                <li>
+                                    <a href="#">Доставка и оплата</a>
+                                </li>
+                                <li>
+                                    <a href="#">Вопросы и ответы</a>
+                                </li>
+                                <li>
+                                    <a href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a href="#">Сотрудничество</a>
+                                </li>
+                                <li>
+                                    <a href="#">Договор оферты</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="right">
@@ -104,6 +164,7 @@
     </footer>
     </div>
 </body>
+<script src="{{URL::asset('resources/js/menu.js')}}"></script>
 <script src="{{URL::asset('resources/js/summ.js')}}"></script>
 <script src="{{URL::asset('resources/js/counter.js')}}"></script>
 <script src="{{URL::asset('resources/js/thrw.js')}}"></script>

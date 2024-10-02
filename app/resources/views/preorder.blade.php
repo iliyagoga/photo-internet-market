@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="preorder">
+        {{Breadcrumbs::render()}}
         <h2><span>Оформление</span> заказа</h2>
         <h3>Подтверждение заказа</h3>
         <div class="first_total">

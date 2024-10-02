@@ -2,6 +2,7 @@
 @section('content')
 <div class="body">
     <div class="catalog">
+        {{Breadcrumbs::render()}}
         <h2>Каталог</h2>
         <div class="count">
             Найдено <span>{{$count}} товаров</span>

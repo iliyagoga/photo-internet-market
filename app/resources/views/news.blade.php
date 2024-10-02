@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="body">
+    {{Breadcrumbs::render()}}
     <h1><span>Новости</span><br> компании</h1>
     <div class="news">
         @foreach ($news as $n )

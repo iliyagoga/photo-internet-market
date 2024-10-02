@@ -22,6 +22,8 @@ Route::get('/product/{id}',[App\Http\Controllers\ProductController::class,'getPr
 
 Route::get('/catalog/{category}/{page}/{price?}',[App\Http\Controllers\ProductController::class,'getProductsByCategory'])->name('category');
 
+Route::get('/categories',[App\Http\Controllers\CategoryController::class,'showCategoryList'])->name('categories');
+
 Route::get('/c/{page}/{price?}',[App\Http\Controllers\ProductController::class,'getProducts'])->name('catalog');
 
 Route::post('/clearSession',[App\Http\Controllers\ProductController::class,'clearSession'])->name('sess');

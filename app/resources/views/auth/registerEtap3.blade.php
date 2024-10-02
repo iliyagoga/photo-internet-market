@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="register etap3">
+{{Breadcrumbs::render()}}
     <form method="POST" action="{{ route('etap3') }}">
         @csrf
         <h2>Регистрация</h2>

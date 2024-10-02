@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="cart">
+    {{Breadcrumbs::render()}}
     <h2>Корзина</h2>
     <div class="times">
         <form action="{{route('redactDates')}}">

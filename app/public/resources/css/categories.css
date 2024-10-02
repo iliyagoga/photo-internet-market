@@ -1,0 +1,19 @@
+.category-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8.4375rem;
+}
+.category-list h2 {
+  font-size: 1.875rem;
+  text-transform: uppercase;
+}
+.category-list .ls ul {
+  list-style: none;
+}
+.category-list .ls ul li {
+  padding: 1rem 0;
+}
+.category-list .ls ul li a {
+  color: #60B021;
+  text-decoration: none;
+}

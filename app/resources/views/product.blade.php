@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="body">
+    {{Breadcrumbs::render('getProduct',$product)}}
     <div class="product">
       <div class="left">
         <div class="preview">
