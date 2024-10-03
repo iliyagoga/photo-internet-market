@@ -21,6 +21,11 @@ Breadcrumbs::for('news', function ($trail) {
     $trail->push('Новости компании', route('news'));
 });
 
+Breadcrumbs::for('newsPage', function ($trail,$news) {
+    $trail->parent('news');
+    $trail->push($news->title, route('newsPage',['id'=>$news->id]));
+});
+
 Breadcrumbs::for('catalog', function ($trail,$request) {
     $trail->parent('main');
     $trail->push('Каталог', route('catalog',$request));
@@ -65,3 +70,4 @@ Breadcrumbs::for('getProduct', function ($trail,$product) {
     $trail->parent('category', $product->category()->first());
     $trail->push($product->model, route('getProduct',[$product->id]));
 });
+

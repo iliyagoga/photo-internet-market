@@ -18,6 +18,10 @@ Route::get('/home', [App\Http\Controllers\MainPage::class, 'index'])->name('home
 
 Route::get('/news',[App\Http\Controllers\NewsController::class,'index'])->name('news');
 
+Route::get('/news/{id}',[App\Http\Controllers\NewsController::class,'showNewsPage'])->name('newsPage');
+
+Route::post('/comment',[App\Http\Controllers\NewsController::class,'comment'])->name('comment')->middleware('auth');
+
 Route::get('/product/{id}',[App\Http\Controllers\ProductController::class,'getProduct'])->name('getProduct');
 
 Route::get('/catalog/{category}/{page}/{price?}',[App\Http\Controllers\ProductController::class,'getProductsByCategory'])->name('category');

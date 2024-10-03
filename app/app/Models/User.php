@@ -74,6 +74,11 @@ class User extends Authenticatable
     public function cart(){
         return $this->hasOne(Cart::class);
     }
+
+    public function comment(){
+        return $this->hasOne(Comment::class);
+    }
+
     public function usersInfo(){
         return $this->hasOne(UsersPrivateInfo::class);
     }

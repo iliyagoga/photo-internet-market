@@ -143,7 +143,7 @@
            
             </div>
             <div class="btn">
-                <span>Все новости</span>
+                <a href="{{route('news')}}">Все новости</a>
             </div>
         </div>
 </div>

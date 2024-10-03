@@ -7,7 +7,8 @@
     <h1><span>Новости</span><br> компании</h1>
     <div class="news">
         @foreach ($news as $n )
-            <div class="block">
+        <a href="{{route('newsPage',[$n->id])}}">
+        <div class="block">
                 <div class="preview">
                     <img src={{Storage::url($n->image)}} alt="">
                 </div>
@@ -21,9 +22,14 @@
                     <div class="text">
                         <p>{{$n->text}}</p>
                     </div>
+                    <div class="commc">
+                        <span>{{$n->comment()->get()->count()}} комментариев</span>
+                    </div>
                 </div>
           
             </div>
+        </a>
+       
         @endforeach
     </div>
 </div>

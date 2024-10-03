@@ -11,7 +11,9 @@ class News extends Model
     use HasFactory;
     protected $fillable=['title','text'];
 
-    public function users(){
-        return $this->belongsToMany(User::class,'elect','user_id','news_id','id','id')->withPivot('comment')->withTimestamps();
+
+
+    public function comment(){
+        return $this->hasOne(Comment::class);
     }
 }

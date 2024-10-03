@@ -300,20 +300,22 @@
   align-items: center;
   background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
   border-radius: 100px;
-  padding: 1.0625rem 3.375rem;
   cursor: pointer;
   width: -moz-max-content;
   width: max-content;
   margin-top: 2.5rem;
 }
-.meanpage .news .btn span {
+.meanpage .news .btn a {
   font-size: 0.875rem;
   line-height: 1rem;
   color: white;
   text-transform: uppercase;
+  text-decoration: none;
+  color: white;
   font-weight: 600;
   width: -moz-max-content;
   width: max-content;
+  padding: 1.0625rem 3.375rem;
 }
 .meanpage .news .btn:hover {
   background: #4F9C2C;
