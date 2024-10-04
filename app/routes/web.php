@@ -51,3 +51,9 @@ Route::get('/deleteFromCart/{product_id}',[App\Http\Controllers\BasketController
 Route::post('/showPreOrder',[App\Http\Controllers\BasketController::class,'showPreOrder'])->name('showPreOrder')->middleware('auth');
 
 Route::post('/createOrder',[App\Http\Controllers\OrderController::class,'createOrder'])->name('createOrder')->middleware('auth');
+
+Route::post('/addElect',[App\Http\Controllers\ElectController::class,'addElect'])->name('addElect')->middleware('auth');
+
+Route::get('/deleteFromElect/{product_id}',[App\Http\Controllers\ElectController::class,'deleteElect'])->name('deleteElect')->middleware('auth');
+
+Route::get('/favourite',[App\Http\Controllers\ElectController::class,'showElect'])->name('favourite')->middleware('auth');

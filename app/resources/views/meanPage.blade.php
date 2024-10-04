@@ -40,12 +40,66 @@
                 и наличными</p>
             </div>
         </div>
+        <div class="slider">
+            <div class="b">
+                <div class="line">
+                    @foreach ($products as $product)
+                        <div class="product">
+                            <div class="preview">
+                                <div class="img">
+                                    <img src={{Storage::url($product->mean_image)}} alt="">
+                                </div>
+                                <form action="{{route('addElect')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button type="submit">
+                                        <img src="{{URL::asset('assets/svg/fav.svg')}}" alt="" class="favs">
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="info">
+                                <h4>{{$product->model}}</h4>
+                                <span>{{$product->company()->first()->name}}</span>
+                            </div>
+                            <div class="prices">
+                                <div class="l">
+                                    <h4>{{$product->price_wkday}}</h4>
+                                    <span>Будний</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_wend}}</h4>
+                                    <span>Выходной</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_week}}</h4>
+                                    <span>Неделя</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_month}}</h4>
+                                    <span>Месяц</span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href="{{route('getProduct',[$product->id])}}" class="more">Подробнее</a>
+                                <form action="{{route('addToCart')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button type="submit">
+                                        В корзину
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
         <div class="text">
             <h3>Вы ищете что-то конкретное?</h3>
             <p>Проект <span>Fotoprokat24</span> является агрегатором предложений всех фотопрокатов Москвы и служит для Вашего удобства. Выберете необходимую категорию, либо начните поиск по названию. Оформив заказ, Вы сможете забрать его из Пункта Выдачи, либо заказать доставку в любую точку Москвы.</p>
             <div class="btns">
                 <div class="btn_catalog">
-                    <span>перейти в каталог</span>
+                    <a href="{{route('catalog',[1,1])}}">перейти в каталог</a>
                 </div>
                 <div class="search">
                     <input type="text" placeholder="Поиск">

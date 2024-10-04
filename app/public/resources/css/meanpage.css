@@ -112,6 +112,10 @@
   width: -moz-max-content;
   width: max-content;
 }
+.meanpage .text .btns .btn_catalog a {
+  color: white;
+  text-decoration: none;
+}
 .meanpage .text .btns .btn_catalog:hover {
   background: #4F9C2C;
 }
@@ -246,6 +250,12 @@
 }
 .meanpage .featuress .btn_catalog:hover {
   background: #4F9C2C;
+}
+.meanpage .slider {
+  padding: 5.9375rem 8.4375rem;
+}
+.meanpage .slider .line {
+  display: flex;
 }
 .meanpage .news {
   display: flex;

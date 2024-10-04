@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{URL::asset('resources/css/cart.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/preorder.css')}}">
     <link rel="stylesheet" href="{{URL::asset('resources/css/categories.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('resources/css/elect.css')}}">
 </head>
 <body>
     <div id="app">
@@ -29,7 +30,10 @@
                 <div class="left">
                     <img class="burger" src="{{URL::asset('assets/png/menu.png')}}" alt="">
                     <div class="logo">
-                        <img src="{{URL::asset('assets/png/logo.png')}}" alt="">
+                        <a href="{{url('/')}}">
+                            <img src="{{URL::asset('assets/png/logo.png')}}" alt="">
+                        </a>
+                    
                     </div>
                     <div class="list-menu hidden">
                         <div class="l-l">
@@ -92,16 +96,33 @@
                         </div>
                     </div>
                 </div>
+                <div class="center">
+                    <div>
+                        <a href="{{route('catalog',[1,1])}}">Каталог</a>
+                    </div>
+
+                    <div>
+                        <a href="#">О компании</a>
+                    </div>
+
+                    <div>
+                        <a href="{{route('news')}}">Новости</a>
+                    </div>
+
+                    <div>
+                        <a href="#">Контакты</a>
+                    </div>
+                </div>
                 <div class="right">
                     <div class="phone_block">
                         <a href="tel:+79991112233">+7-999-111-22-33</a>
                         <span>Круглосуточно</span>
                     </div>
                     <div class="icons_panel">
-                        <div class="favs">
+                        <a class="favs" href="{{route('favourite')}}">
                             <span class="count">0</span>
                             <img src="{{URL::asset('assets/svg/star.svg')}}" alt="">
-                        </div>
+                        </a>
                         <div class="compare">
                             <span class="count">0</span>
                             <img src="{{URL::asset('assets/svg/compare.svg')}}" alt="">

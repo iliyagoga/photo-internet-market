@@ -16,6 +16,13 @@
                 <div class="c_product">
                     <div class="preview">
                         <img src={{Storage::url($product->mean_image)}} alt="">
+                        <form action="{{route('addElect')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$product->id}}">
+                            <button type="submit">
+                                <img src="{{URL::asset('assets/svg/fav.svg')}}" alt="" class="favs">
+                            </button>
+                        </form>
                     </div>
                     <span class="title">
                         {{$product->model}}

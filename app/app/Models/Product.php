@@ -54,6 +54,12 @@ class Product extends Model
         return $this->belongsToMany(AttributesValues::class,'attributes_products','product_id','attributes_values_id','id','id');
     }
 
+    public function elect(){
+        return $this->belongsToMany(User::class,'elect','product_id','user_id','id','id');
+    }
+
+
+
 
 
 

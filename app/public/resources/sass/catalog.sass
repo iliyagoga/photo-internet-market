@@ -103,9 +103,18 @@
                     border: 1px solid #EFEFEF
                     border-radius: 1px
                     & .preview
-                        width: 70%
+                        width: 100%
+                        position: relative
                         & img
-                            width: 100%
+                            width: 70%
+                        & .favs
+                            position: absolute
+                            cursor: pointer
+                            top: 0
+                            right: 0
+                            width: 3rem
+                            & img
+                                width: 100%
                     & .title
                         margin-top: 1rem
                         font-size: .875rem

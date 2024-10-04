@@ -124,9 +124,20 @@
   border-radius: 1px;
 }
 .body .catalog .c_body .catalog_list .c_product .preview {
-  width: 70%;
+  width: 100%;
+  position: relative;
 }
 .body .catalog .c_body .catalog_list .c_product .preview img {
+  width: 70%;
+}
+.body .catalog .c_body .catalog_list .c_product .preview .favs {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  width: 3rem;
+}
+.body .catalog .c_body .catalog_list .c_product .preview .favs img {
   width: 100%;
 }
 .body .catalog .c_body .catalog_list .c_product .title {

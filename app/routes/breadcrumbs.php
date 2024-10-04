@@ -71,3 +71,8 @@ Breadcrumbs::for('getProduct', function ($trail,$product) {
     $trail->push($product->model, route('getProduct',[$product->id]));
 });
 
+Breadcrumbs::for('favourite', function ($trail) {
+    $trail->parent('main');
+    $trail->push('Избранное', route('favourite'));
+});
+

@@ -1,0 +1,98 @@
+.elect {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8.4375rem;
+}
+.elect h2 {
+  font-size: 1.875rem;
+}
+.elect .elect_products {
+  margin-top: 1.875rem;
+}
+.elect .elect_products table {
+  width: 100%;
+}
+.elect .elect_products table thead {
+  color: #75758A;
+  font-size: 0.875rem;
+}
+.elect .elect_products table thead td {
+  border-bottom: 1px solid #E3E3E3;
+  border-top: 1px solid #E3E3E3;
+  padding: 15px 0;
+}
+.elect .elect_products table tbody tr td {
+  border-bottom: 1px solid #E3E3E3;
+  height: 5rem;
+}
+.elect .elect_products table tbody tr .preview img {
+  width: 3.75rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.elect .elect_products table tbody tr .name a {
+  text-decoration: none;
+  color: black;
+}
+.elect .elect_products table tbody tr .name h3 {
+  margin: 0;
+}
+.elect .elect_products table tbody tr .name span {
+  color: #75758A;
+  font-size: 0.875rem;
+}
+.elect .elect_products table tbody tr .price {
+  background-image: linear-gradient(270deg, #8EE901 0%, #4F9C2C 99.06%);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 0.875rem;
+}
+.elect .elect_products table tbody tr .add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: border-box;
+}
+.elect .elect_products table tbody tr .add button {
+  outline: none;
+  border: none;
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border: 0;
+  text-transform: uppercase;
+  line-height: 3rem;
+}
+.elect .elect_products table tbody tr .delete {
+  display: flex;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.elect .elect_products table tbody tr .delete a {
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  display: flex;
+  border-radius: 100px;
+  width: -moz-max-content;
+  width: max-content;
+  outline: 0;
+  background: white;
+  border: 0;
+}
+.elect .elect_products table tbody tr .delete a img {
+  margin: auto;
+}

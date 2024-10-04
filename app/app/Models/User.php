@@ -83,4 +83,8 @@ class User extends Authenticatable
         return $this->hasOne(UsersPrivateInfo::class);
     }
 
+    public function elect(){
+        return $this->belongsToMany(Product::class,'elect','user_id','product_id','id','id');
+    }
+
 }
