@@ -36,6 +36,11 @@ Breadcrumbs::for('category', function ($trail,$cValue) {
     $trail->push($cValue->value, route('category',[$cValue->name,1,1]));
 });
 
+Breadcrumbs::for('search', function ($trail,$request) {
+    $trail->parent('main');
+    $trail->push('Поиск', route('search',$request));
+});
+
 Breadcrumbs::for('profile', function ($trail) {
     $trail->parent('main');
     $trail->push('Профиль', route('profile'));

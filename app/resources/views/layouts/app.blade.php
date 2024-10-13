@@ -185,6 +185,7 @@
     </footer>
     </div>
 </body>
+<script src="{{URL::asset('resources/js/slider.js')}}"></script>
 <script src="{{URL::asset('resources/js/menu.js')}}"></script>
 <script src="{{URL::asset('resources/js/summ.js')}}"></script>
 <script src="{{URL::asset('resources/js/counter.js')}}"></script>

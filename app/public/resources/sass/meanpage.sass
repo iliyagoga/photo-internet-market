@@ -208,9 +208,126 @@
             &:hover
                 background: #4F9C2C
     & .slider
-        padding: 5.9375rem 8.4375rem
-        & .line
-            display: flex
+        width: 62rem
+        margin: auto
+        display: flex
+        align-items: center
+        position: relative
+        margin-top: 4rem
+        & .left_thr
+            padding: .8125rem .9375rem
+            background: white
+            box-shadow: 0px 2px 6px 0px #00000026
+            position: absolute
+            left: -1rem
+            cursor: pointer
+            z-index: 5
+
+        & .right_thr
+            padding: .8125rem .9375rem
+            background: white
+            box-shadow: 0px 2px 6px 0px #00000026
+            position: absolute
+            right: -0.5rem
+            cursor: pointer
+        & .b
+            overflow-x: hidden
+            & .line
+                display: flex
+                position: relative
+                gap: 1rem
+                left: 0
+                width: 100%
+                transition-property: left
+                & .product
+                    height: max-content
+                    display: flex
+                    flex-direction: column
+                    border: 1px solid #EFEFEF
+                    border-radius: 1px
+                    width: 20rem
+                    & .preview
+                        width: 100%
+                        position: relative
+                        padding: 1.5625rem
+                        box-sizing: border-box
+                        & .img
+                            position: relative
+                            width: 100%
+                            display: flex
+                            & img
+                                width: 70%
+                                margin: auto
+                        & form
+                            position: absolute
+                            top: 1rem
+                            right: 1rem
+                            & .favs
+                                cursor: pointer
+                                width: 3rem
+                                height: 3rem
+                                background: white
+                                border: 0
+                                & img
+                                    width: 100%
+                    & .info
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        & h4
+                            font-size: 1rem
+                            margin: 0
+                            text-align: center
+                        & span
+                            font-size: .875rem
+                            color: #75758A
+                            text-align: center
+                    & .prices
+                        display: flex
+                        justify-content: space-between
+                        width: max-content
+                        & .l
+                            width: 25%
+                            padding: 1rem .5625rem
+                            border: 1px solid #EFEFEF
+                            width: max-content
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            & h4
+                                margin: 0
+                                font-size: 1rem
+                            & span  
+                                color: #75758A
+                                margin-top: .5rem
+                                font-size: .875rem
+                    & .btns
+                        display: flex
+                        justify-content: space-evenly
+                        margin: 1.25rem 0
+                        & a
+                            text-decoration: none
+                            font-weight: bold
+                            font-size: .875rem
+                            color: black
+                            padding: .75rem 2rem
+                            border-radius: 100px
+                            box-shadow: 0px 2px 6px 0px #00000026
+                        & button
+                            padding: .75rem 2rem
+                            border-radius: 100px
+                            display: flex
+                            align-items: center
+                            gap: .5rem
+                            color: white
+                            font-size: .875rem
+                            font-weight: bold
+                            outline: 0
+                            border: 0
+                            cursor: pointer
+                            box-shadow: 0px 2px 6px 0px #00000033
+                            background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%)
+
     & .news
         display: flex
         flex-direction: column

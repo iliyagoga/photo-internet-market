@@ -252,10 +252,148 @@
   background: #4F9C2C;
 }
 .meanpage .slider {
-  padding: 5.9375rem 8.4375rem;
-}
-.meanpage .slider .line {
+  width: 62rem;
+  margin: auto;
   display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 4rem;
+}
+.meanpage .slider .left_thr {
+  padding: 0.8125rem 0.9375rem;
+  background: white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  position: absolute;
+  left: -1rem;
+  cursor: pointer;
+  z-index: 5;
+}
+.meanpage .slider .right_thr {
+  padding: 0.8125rem 0.9375rem;
+  background: white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+  position: absolute;
+  right: -0.5rem;
+  cursor: pointer;
+}
+.meanpage .slider .b {
+  overflow-x: hidden;
+}
+.meanpage .slider .b .line {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  left: 0;
+  width: 100%;
+  transition-property: left;
+}
+.meanpage .slider .b .line .product {
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #EFEFEF;
+  border-radius: 1px;
+  width: 20rem;
+}
+.meanpage .slider .b .line .product .preview {
+  width: 100%;
+  position: relative;
+  padding: 1.5625rem;
+  box-sizing: border-box;
+}
+.meanpage .slider .b .line .product .preview .img {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.meanpage .slider .b .line .product .preview .img img {
+  width: 70%;
+  margin: auto;
+}
+.meanpage .slider .b .line .product .preview form {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.meanpage .slider .b .line .product .preview form .favs {
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background: white;
+  border: 0;
+}
+.meanpage .slider .b .line .product .preview form .favs img {
+  width: 100%;
+}
+.meanpage .slider .b .line .product .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meanpage .slider .b .line .product .info h4 {
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+.meanpage .slider .b .line .product .info span {
+  font-size: 0.875rem;
+  color: #75758A;
+  text-align: center;
+}
+.meanpage .slider .b .line .product .prices {
+  display: flex;
+  justify-content: space-between;
+  width: -moz-max-content;
+  width: max-content;
+}
+.meanpage .slider .b .line .product .prices .l {
+  width: 25%;
+  padding: 1rem 0.5625rem;
+  border: 1px solid #EFEFEF;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meanpage .slider .b .line .product .prices .l h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+.meanpage .slider .b .line .product .prices .l span {
+  color: #75758A;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+.meanpage .slider .b .line .product .btns {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.25rem 0;
+}
+.meanpage .slider .b .line .product .btns a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.875rem;
+  color: black;
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.meanpage .slider .b .line .product .btns button {
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: bold;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #8EE902 0%, #4F9C2C 100%);
 }
 .meanpage .news {
   display: flex;

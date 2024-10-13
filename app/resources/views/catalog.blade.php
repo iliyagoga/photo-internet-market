@@ -8,7 +8,7 @@
             Найдено <span>{{$count}} товаров</span>
         </div>
         <div class="catalog_header">
-        @include('paginationCatalog')
+        @include('pagination/paginationCatalog')
         </div>
         <div class="c_body">
             <div class="catalog_list">

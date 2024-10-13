@@ -2,13 +2,13 @@
 @section('content')
 <div class="body">
     <div class="catalog">
-        {{Breadcrumbs::render('category',$cValue)}}
-        <h2>{{$cValue->value}}</h2>
+        {{Breadcrumbs::render()}}
+        <h2>Поиск</h2>
         <div class="count">
             Найдено <span>{{$count}} товаров</span>
         </div>
         <div class="catalog_header">
-        @include('pagination/pagination')
+    
         </div>
         <div class="c_body">
             <div class="catalog_list">
@@ -37,7 +37,6 @@
                 </div>
                 @endforeach
             </div>
-            @include('filterCategory')
         </div>
    
     </div>

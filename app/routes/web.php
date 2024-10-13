@@ -30,6 +30,8 @@ Route::get('/categories',[App\Http\Controllers\CategoryController::class,'showCa
 
 Route::get('/c/{page}/{price?}',[App\Http\Controllers\ProductController::class,'getProducts'])->name('catalog');
 
+Route::post('/search/{page}/{price?}',[App\Http\Controllers\SearchController::class,'getSearchProducts'])->name('search');
+
 Route::post('/clearSession',[App\Http\Controllers\ProductController::class,'clearSession'])->name('sess');
 
 Route::post('/clearSession2',[App\Http\Controllers\ProductController::class,'clearSession2'])->name('sess');
