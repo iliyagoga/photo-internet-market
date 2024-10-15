@@ -97,6 +97,106 @@
                             </div>
                         </div>
                     @endforeach
+                    @foreach ($products as $product)
+                        <div class="product">
+                            <div class="preview">
+                                <div class="img">
+                                    <img src={{Storage::url($product->mean_image)}} alt="">
+                                </div>
+                                <form action="{{route('addElect')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button type="submit" class="favs">
+                                        <img src="{{URL::asset('assets/svg/fav.svg')}}" alt="" class="favs">
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="info">
+                                <h4>{{$product->model}}</h4>
+                                <span>{{$product->company()->first()->name}}</span>
+                            </div>
+                            <div class="prices">
+                                <div class="l">
+                                    <h4>{{$product->price_wkday}} Р</h4>
+                                    <span>Будний</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_wend}} Р</h4>
+                                    <span>Выходной</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_week}} Р</h4>
+                                    <span>Неделя</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_month}} Р</h4>
+                                    <span>Месяц</span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href="{{route('getProduct',[$product->id])}}" class="more">Подробнее</a>
+                                <form action="{{route('addToCart')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button type="submit">
+                                        <img src="{{URL::asset('../assets/svg/shopping cart.svg')}}" alt="">
+                                        <span>В корзину</span>
+                                        
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+                    @foreach ($products as $product)
+                        <div class="product">
+                            <div class="preview">
+                                <div class="img">
+                                    <img src={{Storage::url($product->mean_image)}} alt="">
+                                </div>
+                                <form action="{{route('addElect')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button type="submit" class="favs">
+                                        <img src="{{URL::asset('assets/svg/fav.svg')}}" alt="" class="favs">
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="info">
+                                <h4>{{$product->model}}</h4>
+                                <span>{{$product->company()->first()->name}}</span>
+                            </div>
+                            <div class="prices">
+                                <div class="l">
+                                    <h4>{{$product->price_wkday}} Р</h4>
+                                    <span>Будний</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_wend}} Р</h4>
+                                    <span>Выходной</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_week}} Р</h4>
+                                    <span>Неделя</span>
+                                </div>
+                                <div class="l">
+                                    <h4>{{$product->price_month}} Р</h4>
+                                    <span>Месяц</span>
+                                </div>
+                            </div>
+                            <div class="btns">
+                                <a href="{{route('getProduct',[$product->id])}}" class="more">Подробнее</a>
+                                <form action="{{route('addToCart')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{$product->id}}">
+                                    <button type="submit">
+                                        <img src="{{URL::asset('../assets/svg/shopping cart.svg')}}" alt="">
+                                        <span>В корзину</span>
+                                        
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="right_thr">
@@ -114,6 +214,7 @@
                     <form action="{{route('search',[1])}}" method="post">
                         @csrf
                         <input name="model" type="search" placeholder="Поиск">
+                        <button type="submit">Поиск</button>
                     </form>
                 </div>
             </div>

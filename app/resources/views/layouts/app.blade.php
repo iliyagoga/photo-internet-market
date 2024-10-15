@@ -118,19 +118,21 @@
                         <a href="tel:+79991112233">+7-999-111-22-33</a>
                         <span>Круглосуточно</span>
                     </div>
-                    @auth
                     <div class="icons_panel">
                         <a class="favs" href="{{route('favourite')}}">
-                            <span class="count">{{Auth::user()->elect()->count()}}</span>
+                            <span class="count">0</span>
                             <img src="{{URL::asset('assets/svg/star.svg')}}" alt="">
                         </a>
+                        <div class="compare">
+                            <span class="count">0</span>
+                            <img src="{{URL::asset('assets/svg/compare.svg')}}" alt="">
+                        </div>
                         <a class="shopping-cart" href="{{route('showCart')}}">
-                            <span class="count">{{Auth::user()->cart()->first()->products()->count()}}</span>
+                            <span class="count">0</span>
                             <img src="{{URL::asset('assets/svg/shopping-cart.svg')}}" alt="">
 
                         </a>
                     </div>
-                    @endif
                     <div class="dop">
                         <div class="search">
                             <img src="{{URL::asset('assets/svg/search.svg')}}" alt="">
@@ -148,12 +150,6 @@
                        
                     </div>
                 </div>
-            </div>
-            <div class="header-search search-hidden">
-                <form action="{{route('search',[1])}}" method="post">
-                    @csrf
-                    <input type="search" name="model" id="" placeholder="Поиск по модели">
-                </form>
             </div>
         </header>
         @yield('content')

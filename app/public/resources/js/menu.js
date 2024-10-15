@@ -10,9 +10,3 @@ document.addEventListener('click',(e)=>{
     }
   
 })
-
-let searchIcon = document.querySelector('.dop .search')
-let searchField =document.querySelector('.header-search')
-searchIcon.addEventListener('click',(e)=>{
-    searchField.classList.toggle('search-hidden')
-})

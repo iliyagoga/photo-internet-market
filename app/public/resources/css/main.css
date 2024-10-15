@@ -8,8 +8,6 @@ header {
   width: 100%;
   height: -moz-max-content;
   height: max-content;
-  display: flex;
-  flex-direction: column;
 }
 header .header {
   width: 100%;
@@ -178,26 +176,6 @@ header .header .right .logn a {
   text-decoration: none;
   color: black;
   font-weight: 600;
-}
-header .header-search {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background: #F7F7F7;
-  padding: 1rem 0;
-}
-header .header-search form {
-  width: 50%;
-}
-header .header-search form input {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  width: 100%;
-  outline: 0;
-  border: 0;
-}
-header .search-hidden {
-  display: none;
 }
 
 footer {
