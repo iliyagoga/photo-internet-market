@@ -43,68 +43,35 @@ class SearchController extends Controller
        
                 }
             }
-            $c=false;
-            foreach(session()->all() as $k=>$v){
-                if($v=='y'){
-                    $c=true;
-                    break;
+            session(['page'=>$request->model]);
+            $productsFind=[];
+            $productsIds=[];
+            foreach(Product::whereLike('model',$request->model.'%')->skip(9*($request->page-1))->take(9)->get() as $product){
+                if(!in_array($product->id,$productsIds)){
+                    array_push($productsFind,$product);
+                    array_push($productsIds,$product->id);
                 }
+                
+                
             }
-            if(count(request()->all())>0 || $c ){
-                $arr= [];
-                if(count(request()->all())>0 && $c==false){
-                  
-                    foreach(request()->all() as $key=>$value){
-                        session([$value=>'y']);
-                        array_push($arr,$value);
-                    }
-                }
-                if(count(request()->all())==0){
-                    foreach(session()->all() as $k=>$v){
-                        if($v=='y'){
-                            array_push($arr,$k);
-                        }
-                    }
-                }
-                $productsFind=[];
-                $productsIds=[];
-                foreach($arr as $key=>$value){
-                    foreach(Product::whereLike('model',$request->model.'%')->skip(9*($request->page-1))->take(9)->get() as $product){
-                        if(!in_array($product->id,$productsIds)){
-                            array_push($productsFind,$product);
-                            array_push($productsIds,$product->id);
-                        }
-                     
-                     
-                    }
-                }
-                if($price=='ASC'){
-                    usort($productsFind,function($a,$b){
-                        return $a->price_wkday>$b->price_wkday;
-                    });
-                }
-                if($price=='DESC'){
-                    usort($productsFind,function($a,$b){
-                        return $a->price_wkday<$b->price_wkday;
-                    });
-                }
-                return view('searchPage',[
-                    'catalog'=>$productsFind,
-                    "count"=>count($productsFind),
-                    'request'=>request(),
-                    'pagin_len'=>ceil(count($productsFind)/9)
+            if($price=='ASC'){
+                usort($productsFind,function($a,$b){
+                    return $a->price_wkday>$b->price_wkday;
+                });
+            }
+            if($price=='DESC'){
+                usort($productsFind,function($a,$b){
+                    return $a->price_wkday<$b->price_wkday;
+                });
+            }
+            return view('searchPage',[
+                'catalog'=>$productsFind,
+                "count"=>count($productsFind),
+                'request'=>request(),
+                'pagin_len'=>ceil(count($productsFind)/9)
                     
             ]);
             }   
             session(['page'=>$request->page]);
-            return view('searchPage',[
-                'catalog'=>Product::whereLike('model','%'+$request->model)->orderBy($price?'price_wkday':'id',$price?$price:'ASC')->skip(9*($request->page-1))->take(9)->get(),
-                "count"=>Product::whereLike('model','%'+$request->model)->skip(9*($request->page-1))->take(9)->count(),
-                'request'=>request(),
-                'pagin_len'=>ceil(Product::skip(9*($request->page-1))->take(9)->count()/9)
-                    
-                
-        ]);
-        }
     }
 }
