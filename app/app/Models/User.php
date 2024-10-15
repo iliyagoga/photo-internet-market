@@ -11,9 +11,6 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\News;
 use App\Models\Cart;
-use Orchid\Filters\Types\Like;
-use Orchid\Filters\Types\Where;
-use Orchid\Filters\Types\WhereDateStartEnd;
 
 class User extends Authenticatable
 {
@@ -47,32 +44,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
-        'permissions',
     ];
-    protected $casts = [
-        'permissions'          => 'array',
-        'email_verified_at'    => 'datetime',
-    ];
-    protected $allowedFilters = [
-        'id'         => Where::class,
-        'name'       => Like::class,
-        'email'      => Like::class,
-        'updated_at' => WhereDateStartEnd::class,
-        'created_at' => WhereDateStartEnd::class,
- ];
 
- /**
-  * The attributes for which can use sort in url.
-  *
-  * @var array
-  */
- protected $allowedSorts = [
-     'id',
-     'name',
-     'email',
-     'updated_at',
-     'created_at',
- ];
 
     protected function casts(): array
     {
@@ -115,4 +88,3 @@ class User extends Authenticatable
     }
 
 }
-
