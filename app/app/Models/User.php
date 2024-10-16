@@ -6,11 +6,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\Scope;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\News;
 use App\Models\Cart;
+use App\Models\Role;
 
 class User extends Authenticatable
 {
@@ -55,10 +55,6 @@ class User extends Authenticatable
         ];
     }
 
-    public function scope(){
-        return $this->hasOne(Scope::class);
-    }
-
     public function order(){
         return $this->hasMany(Order::class);
     }
@@ -85,6 +81,10 @@ class User extends Authenticatable
 
     public function elect(){
         return $this->belongsToMany(Product::class,'elect','user_id','product_id','id','id');
+    }
+
+    public function role(){
+        return $this->belongsToMany(Role::class,'roles_users','user_id','role_id','id','id');
     }
 
 }

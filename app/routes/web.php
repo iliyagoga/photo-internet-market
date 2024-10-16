@@ -59,3 +59,12 @@ Route::post('/addElect',[App\Http\Controllers\ElectController::class,'addElect']
 Route::get('/deleteFromElect/{product_id}',[App\Http\Controllers\ElectController::class,'deleteElect'])->name('deleteElect')->middleware('auth');
 
 Route::get('/favourite',[App\Http\Controllers\ElectController::class,'showElect'])->name('favourite')->middleware('auth');
+
+
+Route::controller(App\Http\Controllers\AdminController::class)->group(function(){
+    Route::prefix('admin')->group(function(){
+        Route::get('/panel/{id?}','showPanel')->name('panel');
+        Route::get('/panel/product/{id?}','showProduct')->name('product_panel');
+        Route::get('/panel/category/{id?}','showCategory')->name('category_panel');
+    });
+});
