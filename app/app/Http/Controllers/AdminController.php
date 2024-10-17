@@ -27,10 +27,12 @@ class AdminController extends Controller
             'info'=>Category::get()]);
             }
         if($request->id==3){
-            return view('admin.panel',[
+            return view('admin.attributes',[
                 'type'=> 'attributes',
             'info'=>Attributes::get()]);
         }
+        return view('admin.panel');
+        
     }
 
     public function showProduct(Request $request){
@@ -40,8 +42,25 @@ class AdminController extends Controller
             "tags"=>Tag::where("product_id",'=',$request->id )->get(),
             "company"=>Company::where("product_id",'=',$request->id )->first(),
             'allAttributes'=>Attributes::get()]);
+    }
 
+    public function redCategory(Request $request){
+       $cat= Category::find($request->id);
+       $cat->value=$request->value;
+       $cat->name=$request->name;
+       $cat->save();
+       return back();
+    }
 
+    public function delCategory(Request $request){
+        $cat =Category::find($request->id);
+        $cat->delete();
+        return back();
+    }
+
+    public function addCategory(Request $request){
+        Category::create(['name'=>$request->name,'value'=>$request->value]);
+        return back();
     }
        
     

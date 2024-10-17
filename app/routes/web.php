@@ -66,5 +66,11 @@ Route::controller(App\Http\Controllers\AdminController::class)->group(function()
         Route::get('/panel/{id?}','showPanel')->name('panel');
         Route::get('/panel/product/{id?}','showProduct')->name('product_panel');
         Route::get('/panel/category/{id?}','showCategory')->name('category_panel');
+        Route::post('api/del/category','delCategory')->name('delCategory');
+        Route::post('api/red/category','redCategory')->name('redCategory');
+        Route::post('api/add/category','addCategory')->name('addCategory');
+        Route::post('api/del/category','delCategory')->name('delCategory');
+        Route::post('api/red/category','redCategory')->name('redCategory');
+        Route::post('api/add/category','addCategory')->name('addCategory');
     });
 });

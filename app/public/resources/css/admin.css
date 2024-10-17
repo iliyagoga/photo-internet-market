@@ -21,3 +21,13 @@ body {
   margin-top: 10rem;
   margin-left: 2rem;
 }
+.adminpanel .y {
+  display: flex;
+}
+.adminpanel .y .modal {
+  display: flex;
+  flex-direction: column;
+}
+.adminpanel .y .hidden {
+  display: none;
+}

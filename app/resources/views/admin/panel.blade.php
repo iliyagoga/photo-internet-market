@@ -22,7 +22,6 @@
         <div class="context">
             @yield('context')
         </div>
-       
     </div>
-  
 </body>
+<script src="{{URL::asset('resources/js/admin.js')}}"></script>
