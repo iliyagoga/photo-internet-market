@@ -69,8 +69,8 @@ Route::controller(App\Http\Controllers\AdminController::class)->group(function()
         Route::post('api/del/category','delCategory')->name('delCategory');
         Route::post('api/red/category','redCategory')->name('redCategory');
         Route::post('api/add/category','addCategory')->name('addCategory');
-        Route::post('api/del/category','delCategory')->name('delCategory');
-        Route::post('api/red/category','redCategory')->name('redCategory');
-        Route::post('api/add/category','addCategory')->name('addCategory');
+        Route::post('api/red/attr','redAttr')->name('redAttr');
+        Route::post('api/add/attr','addAttr')->name('addAttr');
+        Route::post('api/red/product','redProduct')->name('redProduct');
     });
 });

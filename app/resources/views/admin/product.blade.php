@@ -1,10 +1,13 @@
 @extends('admin.panel')
 @section('context')
 <div class="product">
-    <form action="" method="post">
+    <form action="{{route('redProduct')}}" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{$product->id}}">
+        @csrf
     <div class="left">
         <div class="preview">
             <img src={{Storage::url($product->mean_image)}} alt="">
+            <input type="file" name="img" id="">
         </div>
         <div class="info">
             <h3>Информация</h3>
@@ -27,7 +30,7 @@
                                 }
                             }
                             @endphp
-                            <select name="attributevalue-{{$attribute->id}}" id="">
+                            <select name="attr-{{$attribute->id}}-attrValDef-{{$def}}" id="">
                                 <option value="null">Нет</option>
                                 @foreach ($attribute->attributesValue()->get() as $at)
                                 <option value="atv-{{$at->id}}" <?php if($def==$at->id)echo 'selected="selected"'?>>{{$at->value}}</option>
@@ -65,7 +68,7 @@
                     <div class="k">
                         <span class="tl">Выходной</span>
                         <span class="price">
-                        <input type="number" value="{{$product->price_wend}}" name="price_wendy"> Р</span>
+                        <input type="number" value="{{$product->price_wend}}" name="price_wend"> Р</span>
                     </div>
                 </div>
                 <div class="l">
@@ -85,13 +88,14 @@
             <div class="ts">
             @foreach ( $tags as $tag )
                 <div class="tag">
-                    <span>{{$tag->value}}</span>
-
+                    <input type="text" name="tag-{{$tag->id}}" value="{{$tag->value}}">
                 </div>
             @endforeach
+            <input type="text" name="new">
             </div>
         </div>
      </div>
+     <button type="submit">Сохранить</button>
     </form>
      
     </div>
