@@ -223,7 +223,6 @@ class ProductController extends Controller
             if(count(request()->all())>0){
                 foreach(session()->all() as $k=>$v){
                     if($k!='_token'){
-                        dd($k.' '.$v);
                         session()->remove($k);
                     }
        

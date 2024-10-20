@@ -28,6 +28,7 @@ header .header .left {
 }
 header .header .left .list-menu {
   position: absolute;
+  z-index: 100;
   top: 100%;
   background: white;
   display: flex;

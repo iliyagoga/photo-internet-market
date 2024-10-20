@@ -16,13 +16,26 @@
         @csrf
         <button type="submit"><img src="{{URL::asset('assets/svg/003-delete.svg')}}" alt=""></button>
     </form>
+    @php
+     $url=explode('/',url()->current())[3].'/'.explode('/',url()->current())[4];
+    global  $price;
+    if (request()->session()->get('price')){
+        if(request()->session()->get('price')=="DESC"){
+        $price=2;}
+        else{
+        $price=1;}
+    }
+    else{
+    $price='';}
+    @endphp
     <a 
-    href="{{request()->session()->get('page')-1>0?(substr(URL::current(), 0,strlen(URL::current())-1).(request()->session()->exists('page'))?request()->session()->get('page')-1:'1'):''}}" class="p {{$request->session()->get('page')-1==0? 'none_active':''}}">
+    href="<?php if(request()->session()->get('page')-1>0) echo url($url,[request()->session()->get('page')-1,$price]); ?>"  class="p <?php if($request->session()->get('page')-1==0) echo 'none_active'; echo ''?>">
         <img src="{{URL::asset('assets/svg/bottom.svg')}}" alt="">
     </a>
     <a 
-    href="{{request()->session()->get('page')+1<=$pagin_len?(substr(URL::current(), 0,strlen(URL::current())-1).(request()->session()->exists('page'))?request()->session()->get('page')+1:'1'):''}}" class="p {{$request->session()->get('page')+1>$pagin_len? 'none_active':''}}">
+      href="<?php if(request()->session()->get('page')+1<=$pagin_len)echo url($url,[request()->session()->get('page')+1,$price]);?>" class="p <?php if($request->session()->get('page')+1>$pagin_len) echo 'none_active'; echo ''?>">
         <img src="{{URL::asset('assets/svg/top.svg')}}" alt="">
     </a>
+
 </div>
 

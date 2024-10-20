@@ -81,7 +81,7 @@
             <div class="ts">
             @foreach ( $tags as $tag )
                 <div class="tag">
-                    <span>{{$tag->value}}</span>
+                    <a href="{{route('tags',[$tag->value,1])}}">{{$tag->value}}</a>
                 </div>
             @endforeach
             </div>

@@ -1,0 +1,56 @@
+@extends('admin.panel')
+@section('context')
+<div class="user">
+    <div class="title">
+    {{$user->name}} {{$user->sername}} {{$user->patronymic}}
+    </div>
+    <div>
+        {{$user->email}}
+    </div>
+    <div>
+    {{$user->s_sername}} 
+    </div>
+    <div>
+        {{$user->r_name}}
+    </div>
+    <div>
+        {{$user->birthday}}
+    </div>
+    <div>
+        {{$user->phone}}
+    </div>
+    <div>
+        {{$user->s_phone}}
+    </div>
+    <div>
+        {{$user->usersInfo->passport}}
+    </div>
+    <div>
+        {{$user->usersInfo->take_date}}
+    </div>
+    <div>
+        {{$user->usersInfo->residence_address}}
+    </div>
+    <div>
+        {{$user->usersInfo->live_address}}
+    </div>
+    <div>
+        {{$user->usersInfo->taker}}
+    </div>
+    <div>
+        {{$user->usersInfo->company_name}}
+    </div>
+    <div>
+        {{$user->usersInfo->post}}
+    </div>
+    <div>
+        {{$user->usersInfo->w_phone}}
+    </div>
+    <div>
+        {{$user->usersInfo->from}}
+    </div>
+    <div>
+        {{$user->usersInfo->witness}}
+    </div>
+</div>
+@endsection

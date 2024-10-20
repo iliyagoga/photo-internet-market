@@ -31,6 +31,11 @@ Breadcrumbs::for('catalog', function ($trail,$request) {
     $trail->push('Каталог', route('catalog',$request));
 });
 
+Breadcrumbs::for('tags', function ($trail,$request) {
+    $trail->parent('main');
+    $trail->push('Теги', route('tags',['tag'=>$request->tag,'page'=>$request->page]));
+});
+
 Breadcrumbs::for('category', function ($trail,$cValue) {
     $trail->parent('main');
     $trail->push($cValue->value, route('category',[$cValue->name,1,1]));

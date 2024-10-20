@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string('value',32)->nullable(false)->unique();
+            $table->string('value',32)->nullable(false);
             $table->foreignIdFor(Product::class);
             $table->timestamps();
         });

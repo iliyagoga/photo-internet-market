@@ -284,7 +284,8 @@
   position: relative;
   gap: 1rem;
   left: 0;
-  width: 100%;
+  width: -moz-max-content;
+  width: max-content;
   transition-property: left;
 }
 .meanpage .slider .b .line .product {
@@ -419,26 +420,30 @@
   width: 100%;
   cursor: pointer;
 }
-.meanpage .news .news_block .block .preview {
+.meanpage .news .news_block .block a {
+  text-decoration: none;
+  color: black;
+}
+.meanpage .news .news_block .block a .preview {
   width: 100%;
 }
-.meanpage .news .news_block .block .preview img {
+.meanpage .news .news_block .block a .preview img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.meanpage .news .news_block .block .content {
+.meanpage .news .news_block .block a .content {
   padding: 1.875rem;
   font-family: sans-serif;
 }
-.meanpage .news .news_block .block .content .n_date span {
+.meanpage .news .news_block .block a .content .n_date span {
   font-size: 0.875rem;
   color: #75758A;
 }
-.meanpage .news .news_block .block .content .n_title p {
+.meanpage .news .news_block .block a .content .n_title p {
   font-size: 1.125rem;
 }
-.meanpage .news .news_block .block .content .n_text p {
+.meanpage .news .news_block .block a .content .n_text p {
   font-size: 0.875rem;
   color: #75758A;
 }

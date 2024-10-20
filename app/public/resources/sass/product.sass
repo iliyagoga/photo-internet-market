@@ -4,6 +4,7 @@
         display: flex
         justify-content: space-between
         font-family: sans-serif
+        margin-top: 2rem
         & .left
             width: 40%
             & .preview
@@ -12,6 +13,9 @@
                 justify-content: center
                 align-items: center
                 border: 1px solid #EFEFEF
+                & img
+                    width: 100%
+                    object-fit: cover
             & .info
                 display: flex
                 flex-direction: column
@@ -132,11 +136,13 @@
                     gap: .625rem
                     margin-top: 1rem
                     & .tag
-                        color: #75758A
                         font-size: .875rem
                         padding: .4375rem .5625rem
                         background:  linear-gradient(180deg, rgba(247, 247, 247, 0.5) 0%, #F7F7F7 100%)
                         border: 1px solid #E3E3E3
+                        & a
+                            text-decoration: none
+                            color: #75758A
 
             
 

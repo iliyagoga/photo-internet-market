@@ -188,7 +188,8 @@
             <h3>Новости компании</h3>
             <div class="news_block">
             @foreach ($news as $n )
-                <div class="block">
+                <div class="block">    
+                    <a href="{{route('newsPage',[$n->id])}}">
                     <div class="preview">
                         <img src={{Storage::url($n->image)}} alt="">
                     </div>
@@ -203,6 +204,7 @@
                             <p>{{$n->text}}</p>
                         </div>
                     </div>
+                    </a>
             
                 </div>
             @endforeach

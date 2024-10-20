@@ -7,10 +7,9 @@ const width = document.querySelector('.b').clientWidth
 const widthSlider= document.querySelector('.line').clientWidth
 rightThrow.addEventListener('click',(e)=>{
     if(c<widthSlider/width){
-        console.log(c,widthSlider,width)
         if(Math.floor(widthSlider/width)==c){
-            console.log(2)
             slider.style.left=-1*(widthSlider/width-c)+'px'
+            c=0;
         }else{
             c++;
             slider.style.transitionDuration='.5s'
@@ -21,6 +20,7 @@ rightThrow.addEventListener('click',(e)=>{
         }
       
     }
+
  
 })
 leftThrow.addEventListener('click',(e)=>{

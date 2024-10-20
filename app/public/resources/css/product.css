@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   font-family: sans-serif;
+  margin-top: 2rem;
 }
 .body .product .left {
   width: 40%;
@@ -15,6 +16,11 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #EFEFEF;
+}
+.body .product .left .preview img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .body .product .left .info {
   display: flex;
@@ -166,9 +172,12 @@
   margin-top: 1rem;
 }
 .body .product .right .tags .ts .tag {
-  color: #75758A;
   font-size: 0.875rem;
   padding: 0.4375rem 0.5625rem;
   background: linear-gradient(180deg, rgba(247, 247, 247, 0.5) 0%, #F7F7F7 100%);
   border: 1px solid #E3E3E3;
+}
+.body .product .right .tags .ts .tag a {
+  text-decoration: none;
+  color: #75758A;
 }

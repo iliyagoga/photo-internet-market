@@ -51,7 +51,7 @@ class OrderController extends Controller
                 'count'=>$counts[$i]
             ]);
         }
-
+        Auth::user()->cart()->first()->products()->detach();
         return redirect(url('c/1/1'));
 
     }

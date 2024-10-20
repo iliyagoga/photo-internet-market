@@ -2,13 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Attributes;
-use App\Models\AttributesValues;
-use App\Models\Category;
-use App\Models\Company;
 use App\Models\Product;
-use App\Models\Tag;
-use Attribute;
+
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
@@ -64,6 +59,7 @@ class SearchController extends Controller
                     return $a->price_wkday<$b->price_wkday;
                 });
             }
+            session(['page'=>$request->page]);
             return view('searchPage',[
                 'catalog'=>$productsFind,
                 "count"=>count($productsFind),
@@ -72,6 +68,6 @@ class SearchController extends Controller
                     
             ]);
             }   
-            session(['page'=>$request->page]);
+           
     }
 }

@@ -237,7 +237,7 @@
                 position: relative
                 gap: 1rem
                 left: 0
-                width: 100%
+                width: max-content
                 transition-property: left
                 & .product
                     height: max-content
@@ -348,22 +348,25 @@
                 border: 1px solid #EFEFEF
                 width: 100%
                 cursor: pointer
-                & .preview
-                    width: 100%
-                    & img
+                & a
+                    text-decoration: none
+                    color: black
+                    & .preview
                         width: 100%
-                        object-fit: cover
-                & .content
-                    padding: 1.875rem
-                    font-family: sans-serif
-                    & .n_date span
-                        font-size: .875rem
-                        color: #75758A
-                    & .n_title p
-                        font-size: 1.125rem
-                    & .n_text p
-                        font-size: .875rem
-                        color: #75758A
+                        & img
+                            width: 100%
+                            object-fit: cover
+                    & .content
+                        padding: 1.875rem
+                        font-family: sans-serif
+                        & .n_date span
+                            font-size: .875rem
+                            color: #75758A
+                        & .n_title p
+                            font-size: 1.125rem
+                        & .n_text p
+                            font-size: .875rem
+                            color: #75758A
         & .btn
             display: flex
             justify-content: center

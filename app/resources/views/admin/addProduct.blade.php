@@ -1,12 +1,10 @@
 @extends('admin.panel')
 @section('context')
 <div class="product">
-    <form action="{{route('redProduct')}}" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="{{$product->id}}">
+    <form action="{{route('addShowProduct')}}" method="post" enctype="multipart/form-data">
         @csrf
     <div class="left">
         <div class="preview">
-            <img src={{Storage::url($product->mean_image)}} alt="">
             <input type="file" name="img" id="">
         </div>
         <div class="info">
@@ -19,21 +17,10 @@
                             {{$attribute->value}}
                         </span>
                         <span class="value">
-                            @php
-                            $def = null;
-                            foreach($attributes as $r){
-                                foreach($attribute->attributesValue()->get() as $at){
-                                if($r->id==$at->id){
-                                    $def=$at->id;
-                                    break;
-                                    }
-                                }
-                            }
-                            @endphp
-                            <select name="attr-{{$attribute->id}}-attrValDef-{{$def}}" id="">
+                            <select name="attr-{{$attribute->id}}" id="">
                                 <option value="null">Нет</option>
                                 @foreach ($attribute->attributesValue()->get() as $at)
-                                <option value="atv-{{$at->id}}" <?php if($def==$at->id)echo 'selected="selected"'?>>{{$at->value}}</option>
+                                <option value="atv-{{$at->id}}">{{$at->value}}</option>
                                 @endforeach
                             
                             </select>
@@ -47,28 +34,16 @@
            
         </div>
       </div>
-      <div>
-        @foreach ($categories as $category)
-            <div>
-                <span>{{$category->name}}</span>
-                <input type="radio" name="category" <?php if(!empty($product->category()->first()) && $category->id==$product->category()->first()->id){ echo 'checked';}?> value="{{$category->id}}">
-            </div>
-        @endforeach
-      </div>
      <div class="right">
         <div class="c">
-            <input type="text" name="company" value="{{$company->name}}"id="" >
+            <input type="text" name="company" id="" >
         </div>
         <h2 class="title">
-            <input type="text" value="{{$product->model}}" name="model">
+            <input type="text"  name="model">
         </h2>
         <div class="text">
             <h3>Описание товара</h3>
-            <textarea name="text">{{$product->text}}</textarea>
-        </div>
-        <div class="stock">
-            <span>В наличии</span>
-            <input type="checkbox" name="stock" id="" <?php if($product->stock) echo 'checked'?>>
+            <textarea name="text"></textarea>
         </div>
         <div class="prices">
             <h3>Цены в нашем магазине</h3>
@@ -77,22 +52,22 @@
                     <div class="k">
                         <span class="tl">Будний</span>
                         <span class="price">
-                            <input type="number" value="{{$product->price_wkday}}" name="price_wkday"> Р</span>
+                            <input type="number" name="price_wkday"> Р</span>
                     </div>
                     <div class="k">
                         <span class="tl">Выходной</span>
                         <span class="price">
-                        <input type="number" value="{{$product->price_wend}}" name="price_wend"> Р</span>
+                        <input type="number"  name="price_wend"> Р</span>
                     </div>
                 </div>
                 <div class="l">
                     <div class="k">
                             <span class="tl">Неделя</span>
-                            <span class="price"> <input type="number" value="{{$product->price_week}}" name="price_week">Р</span>
+                            <span class="price"> <input type="number"  name="price_week">Р</span>
                     </div>
                     <div class="k">
                             <span class="tl">Месяц</span>
-                            <span class="price"><input type="number" value="{{$product->price_month}}" name="price_month"> Р</span>
+                            <span class="price"><input type="number"  name="price_month"> Р</span>
                     </div>
                  </div>
             </div>
@@ -100,11 +75,6 @@
         <div class="tags">
             <h3>Облако тегов</h3>
             <div class="ts">
-            @foreach ( $tags as $tag )
-                <div class="tag">
-                    <input type="text" name="tag-{{$tag->id}}" value="{{$tag->value}}">
-                </div>
-            @endforeach
             <input type="text" name="new">
             </div>
         </div>

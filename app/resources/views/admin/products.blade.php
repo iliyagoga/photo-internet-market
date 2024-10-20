@@ -1,5 +1,6 @@
 @extends('admin.panel')
 @section('context')
+<a href="{{route('addProduct')}}">Добавить товар</a>
 <table>
     <thead>
         <tr>

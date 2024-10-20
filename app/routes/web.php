@@ -32,6 +32,8 @@ Route::get('/c/{page}/{price?}',[App\Http\Controllers\ProductController::class,'
 
 Route::post('/search/{page}/{price?}',[App\Http\Controllers\SearchController::class,'getSearchProducts'])->name('search');
 
+Route::get('/tags/{tag}/{page}/{price?}',[App\Http\Controllers\TagController::class,'getTagProducts'])->name('tags');
+
 Route::post('/clearSession',[App\Http\Controllers\ProductController::class,'clearSession'])->name('sess');
 
 Route::post('/clearSession2',[App\Http\Controllers\ProductController::class,'clearSession2'])->name('sess');
@@ -66,11 +68,15 @@ Route::controller(App\Http\Controllers\AdminController::class)->group(function()
         Route::get('/panel/{id?}','showPanel')->name('panel');
         Route::get('/panel/product/{id?}','showProduct')->name('product_panel');
         Route::get('/panel/category/{id?}','showCategory')->name('category_panel');
+        Route::get('/panel/order/{id?}','showOrder')->name('order_panel');
+        Route::get('/panel/user/{id?}','showUser')->name('user_panel');
         Route::post('api/del/category','delCategory')->name('delCategory');
         Route::post('api/red/category','redCategory')->name('redCategory');
         Route::post('api/add/category','addCategory')->name('addCategory');
         Route::post('api/red/attr','redAttr')->name('redAttr');
         Route::post('api/add/attr','addAttr')->name('addAttr');
         Route::post('api/red/product','redProduct')->name('redProduct');
+        Route::get('/panel/add/product','addShowProduct')->name('addShowProduct');
+        Route::post('/panel/add/product','addProduct')->name('addProduct');
     });
 });
